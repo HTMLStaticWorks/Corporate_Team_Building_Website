@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corporate Dashboard - Elevate</title>
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+<body>
+
+    <div class="dashboard-layout">
+        
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-brand">
+                <a href="index.html" style="color: var(--primary); font-family: var(--font-heading); font-weight: 700;">Elevate<span style="color: var(--secondary)">.</span></a>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="#" class="active" data-tab="overview"><i class="fa-solid fa-shapes"></i> Event Overview</a></li>
+                    <li><a href="#" data-tab="participants"><i class="fa-solid fa-users"></i> Participants</a></li>
+                    <li><a href="#" data-tab="waivers"><i class="fa-solid fa-file-signature"></i> Digital Waivers</a></li>
+                    <li><a href="#" data-tab="media"><i class="fa-solid fa-images"></i> Media Gallery</a></li>
+                    <li><a href="#" data-tab="billing"><i class="fa-solid fa-file-invoice-dollar"></i> Billing & Invoices</a></li>
+                    <li><a href="#" data-tab="settings"><i class="fa-solid fa-gear"></i> Settings</a></li>
+                </ul>
+            </nav>
+
+            <div class="sidebar-footer">
+                <a href="login.html" style="color: #d32f2f; display: flex; align-items: center; gap: 0.5rem; font-weight: 500;"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="dashboard-main">
+            
+            <!-- Dashboard Header -->
+            <header class="dash-header">
+                <div style="display: flex; align-items: center; gap: 1rem;">
+                    <button class="sidebar-toggle" id="sidebarToggle"><i class="fa-solid fa-bars"></i></button>
+                    <div>
+                        <h2 style="margin: 0; font-size: 1.5rem;">Corporate Portal</h2>
+                        <p style="margin: 0; color: var(--text-light); font-size: 0.875rem;">Welcome back, Acme Corp HR</p>
+                    </div>
+                </div>
+                
+                <div style="display: flex; align-items: center; gap: 1.5rem;">
+                    <!-- Toggles -->
+                    <button id="theme-toggle" style="background:none; border:none; cursor:pointer; color: var(--text-color); font-size: 1.25rem;"><i class="fa-solid fa-moon"></i></button>
+                    <!-- User Profile Dropdown Placeholder -->
+                    <div class="dash-user-profile">
+                        <div class="dash-avatar">AC</div>
+                        <div style="display: none;">Acme Corp <i class="fa-solid fa-chevron-down"></i></div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- TABS CONTAINER -->
+            <div id="tab-overview" class="tab-content active">
+                
+                <!-- Metrics -->
+                <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); margin-bottom: 2rem;">
+                    <div class="dash-card">
+                        <p style="color: var(--text-light); margin-bottom: 0.5rem; font-size: 0.875rem;">Upcoming Events</p>
+                        <h3 style="font-size: 2rem; margin: 0;">1</h3>
+                    </div>
+                    <div class="dash-card">
+                        <p style="color: var(--text-light); margin-bottom: 0.5rem; font-size: 0.875rem;">Total Participants</p>
+                        <h3 style="font-size: 2rem; margin: 0;">24</h3>
+                    </div>
+                    <div class="dash-card">
+                        <p style="color: var(--text-light); margin-bottom: 0.5rem; font-size: 0.875rem;">Missing Waivers</p>
+                        <h3 style="font-size: 2rem; margin: 0; color: #E65100;">6</h3>
+                    </div>
+                </div>
+
+                <!-- Upcoming Event Booking info -->
+                <div class="dash-card" style="margin-bottom: 2rem; border-left: 4px solid var(--secondary);">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem;">
+                        <div>
+                            <span class="status-badge status-valid" style="margin-bottom: 1rem; display: inline-block;">Confirmed</span>
+                            <h3 style="margin-bottom: 0.5rem;">River Rapids Challenge</h3>
+                            <p style="color: var(--text-light); margin-bottom: 1rem;"><i class="fa-regular fa-calendar" style="margin-right: 0.5rem;"></i> October 15, 2026 at 9:00 AM</p>
+                            <p style="margin-bottom: 0;"><strong>Location:</strong> Colorado River Outpost</p>
+                            <p style="margin-bottom: 0;"><strong>Roster:</strong> 18 of 24 Confirmed</p>
+                        </div>
+                        <div>
+                            <a href="#" class="btn btn-secondary" style="margin-bottom: 0.5rem; width: 100%;">Download Itinerary</a>
+                            <br>
+                            <a href="#" class="btn btn-outline" style="width: 100%;">Contact Coordinator</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Activity/Action Needed -->
+                <div class="dash-card">
+                    <div class="dash-card-header">
+                        <h3>Action Required</h3>
+                    </div>
+                    <table class="dash-table">
+                        <thead>
+                            <tr>
+                                <th>Participant</th>
+                                <th>Email</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>John Doe</td>
+                                <td>john@acmecorp.com</td>
+                                <td><span class="status-badge status-action">Waiver Missing</span></td>
+                                <td><a href="#" style="color: var(--primary); font-weight: 500;">Resend Invite</a></td>
+                            </tr>
+                            <tr>
+                                <td>Sarah Jenkins</td>
+                                <td>sarah@acmecorp.com</td>
+                                <td><span class="status-badge status-action">Waiver Missing</span></td>
+                                <td><a href="#" style="color: var(--primary); font-weight: 500;">Resend Invite</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- PARTICIPANTS TAB -->
+            <div id="tab-participants" class="tab-content" style="display: none;">
+                <div class="dash-card">
+                    <div class="dash-card-header">
+                        <h3>Team Roster</h3>
+                        <button class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.875rem;"><i class="fa-solid fa-plus" style="margin-right: 0.5rem;"></i> Add Participant</button>
+                    </div>
+                    <table class="dash-table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Role</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Marcus Torres</td>
+                                <td>marcus@acmecorp.com</td>
+                                <td>Sales Lead</td>
+                                <td><span class="status-badge status-valid">Attending</span></td>
+                            </tr>
+                            <tr>
+                                <td>John Doe</td>
+                                <td>john@acmecorp.com</td>
+                                <td>Analyst</td>
+                                <td><span class="status-badge status-pending">Pending Invite</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- WAIVERS TAB -->
+            <div id="tab-waivers" class="tab-content" style="display: none;">
+                <div class="grid" style="grid-template-columns: 1fr 2fr; gap: 2rem;">
+                    
+                    <div class="dash-card">
+                        <h3 style="margin-bottom: 1rem;">Waiver Status</h3>
+                        
+                        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem; border-bottom: 1px solid var(--border-color); padding-bottom: 1rem;">
+                            <span style="color: var(--text-light);">Total Required</span>
+                            <span style="font-weight: 600;">24</span>
+                        </div>
+                        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem; border-bottom: 1px solid var(--border-color); padding-bottom: 1rem;">
+                            <span style="color: var(--text-light);">Signed</span>
+                            <span style="font-weight: 600; color: #2E7D32;">18</span>
+                        </div>
+                        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.5rem;">
+                            <span style="color: var(--text-light);">Pending</span>
+                            <span style="font-weight: 600; color: #C62828;">6</span>
+                        </div>
+
+                        <button class="btn btn-primary" style="width: 100%;"><i class="fa-solid fa-envelope" style="margin-right: 0.5rem;"></i> Email Reminders to All</button>
+                    </div>
+
+                    <div class="dash-card">
+                        <div class="dash-card-header">
+                            <h3>Document Storage</h3>
+                            <button class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.875rem;"><i class="fa-solid fa-download" style="margin-right: 0.5rem;"></i> Download All PDF</button>
+                        </div>
+                        <table class="dash-table">
+                            <thead>
+                                <tr>
+                                    <th>Document</th>
+                                    <th>Signed By</th>
+                                    <th>Date</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><i class="fa-solid fa-file-pdf" style="color: #d32f2f; margin-right: 0.5rem;"></i> General_Liability.pdf</td>
+                                    <td>Marcus Torres</td>
+                                    <td>Oct 1, 2026</td>
+                                    <td><a href="#" style="color: var(--primary);">View</a></td>
+                                </tr>
+                                <tr>
+                                    <td><i class="fa-solid fa-file-pdf" style="color: #d32f2f; margin-right: 0.5rem;"></i> General_Liability.pdf</td>
+                                    <td>Emily Chen</td>
+                                    <td>Oct 2, 2026</td>
+                                    <td><a href="#" style="color: var(--primary);">View</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MEDIA TAB -->
+            <div id="tab-media" class="tab-content" style="display: none;">
+                <div class="dash-card" style="margin-bottom: 2rem; background: var(--primary); color: var(--accent);">
+                    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+                        <div>
+                            <h3 style="color: var(--secondary);">Post-Event Gallery Available</h3>
+                            <p style="margin: 0; color: rgba(245, 242, 232, 0.8);">Your photos and performance videos from "Mountain Survival Strategy" are ready.</p>
+                        </div>
+                        <button class="btn btn-secondary"><i class="fa-solid fa-download" style="margin-right: 0.5rem;"></i> Download Zip (2.4GB)</button>
+                    </div>
+                </div>
+
+                <div class="grid" style="grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));">
+                    <img src="https://images.unsplash.com/photo-1551698618-1dfe5d97d256?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Team" style="width: 100%; height: 150px; object-fit: cover; border-radius: 8px; box-shadow: var(--shadow-sm);">
+                    <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Action" style="width: 100%; height: 150px; object-fit: cover; border-radius: 8px; box-shadow: var(--shadow-sm);">
+                    <img src="https://images.unsplash.com/photo-1517400508447-f8dd518b86db?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Group" style="width: 100%; height: 150px; object-fit: cover; border-radius: 8px; box-shadow: var(--shadow-sm);">
+                </div>
+            </div>
+            
+        </main>
+    </div>
+
+    <!-- Dashboard Script -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/dashboard.js"></script>
+</body>
+</html>

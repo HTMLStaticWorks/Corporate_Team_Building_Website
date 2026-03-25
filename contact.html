@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Elevate</title>
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+<body>
+
+    <!-- ======== NAVBAR ======== -->
+    <header class="navbar">
+        <div class="container">
+            <a href="index.html" class="nav-brand">Elevate<span style="color: var(--secondary)">.</span></a>
+            
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="activities.html">Activities</a>
+                <a href="solutions.html">Corporate Solutions</a>
+                <a href="pricing.html">Pricing</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html" style="color: var(--primary)">Contact</a>
+            </nav>
+            
+            <div class="nav-controls">
+                <button id="theme-toggle"><i class="fa-solid fa-moon"></i></button>
+                <button id="rtl-toggle"><i class="fa-solid fa-language"></i></button>
+                <a href="login.html" class="btn btn-primary" style="padding: 0.5rem 1.5rem; font-size: 0.875rem;">Client Login</a>
+                <button class="hamburger"><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ======== PAGE HEADER ======== -->
+    <section class="section" style="padding-top: 150px; padding-bottom: 4rem; background-color: var(--bg-color);">
+        <div class="container">
+            <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+                <h1 style="font-size: clamp(2.5rem, 5vw, 3.5rem); margin-bottom: 1rem;">Let's Talk Adventure.</h1>
+                <p style="color: var(--text-light); font-size: 1.25rem;">Book a consultation with our corporate planning specialists today.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======== CONTACT FORM & INFO ======== -->
+    <section class="section" style="padding-top: 2rem;">
+        <div class="container">
+            <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 4rem;">
+                
+                <!-- Info -->
+                <div>
+                    <h2 style="font-size: 2rem; margin-bottom: 1.5rem;">Get in Touch</h2>
+                    <p style="color: var(--text-light); margin-bottom: 2.5rem;">Whether you are an HR manager looking for a standard package or a CEO needing a bespoke executive retreat, our team is ready to scale the perfect solution.</p>
+                    
+                    <div style="margin-bottom: 2rem; display: flex; gap: 1rem; align-items: flex-start;">
+                        <div style="width: 40px; height: 40px; border-radius: 50%; background: var(--secondary); color: var(--primary); display: flex; align-items: center; justify-content: center; font-size: 1.25rem; flex-shrink: 0;">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div>
+                            <h4 style="margin-bottom: 0.25rem;">Corporate Headquarters</h4>
+                            <p style="color: var(--text-light); margin: 0;">100 Adventure Way, Suite 400<br>Denver, CO 80202</p>
+                        </div>
+                    </div>
+
+                    <div style="margin-bottom: 2rem; display: flex; gap: 1rem; align-items: flex-start;">
+                        <div style="width: 40px; height: 40px; border-radius: 50%; background: var(--secondary); color: var(--primary); display: flex; align-items: center; justify-content: center; font-size: 1.25rem; flex-shrink: 0;">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div>
+                            <h4 style="margin-bottom: 0.25rem;">Call Us</h4>
+                            <p style="color: var(--text-light); margin: 0;">+1 (800) 555-TEAM (Sales)<br>+1 (800) 555-SAFE (Emergency Ops)</p>
+                        </div>
+                    </div>
+
+                    <div style="margin-bottom: 2rem; display: flex; gap: 1rem; align-items: flex-start;">
+                        <div style="width: 40px; height: 40px; border-radius: 50%; background: var(--secondary); color: var(--primary); display: flex; align-items: center; justify-content: center; font-size: 1.25rem; flex-shrink: 0;">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h4 style="margin-bottom: 0.25rem;">Email</h4>
+                            <p style="color: var(--text-light); margin: 0;">hello@elevate-teams.com</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form -->
+                <div style="background: var(--card-bg); padding: 3rem; border-radius: 8px; box-shadow: var(--shadow-md);">
+                    <h3 style="margin-bottom: 2rem;">Request Proposal</h3>
+                    <form action="#" method="POST" id="contactForm">
+                        <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem;">
+                            <div>
+                                <label class="form-label">First Name *</label>
+                                <input type="text" class="form-control" required placeholder="John">
+                            </div>
+                            <div>
+                                <label class="form-label">Last Name *</label>
+                                <input type="text" class="form-control" required placeholder="Doe">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Company Name *</label>
+                            <input type="text" class="form-control" required placeholder="Acme Corp">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Corporate Email *</label>
+                            <input type="email" class="form-control" required placeholder="john@acmecorp.com">
+                        </div>
+
+                        <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem;">
+                            <div>
+                                <label class="form-label">Estimated Team Size</label>
+                                <select class="form-control">
+                                    <option>Under 15</option>
+                                    <option>15 - 50</option>
+                                    <option>50 - 100</option>
+                                    <option>100+</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="form-label">Timeline</label>
+                                <select class="form-control">
+                                    <option>Within 30 Days</option>
+                                    <option>1 - 3 Months</option>
+                                    <option>3 - 6 Months</option>
+                                    <option>Just Planning</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">Message / Details</label>
+                            <textarea class="form-control" rows="4" placeholder="Tell us about your team's current challenges or goals..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Inquiry</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ======== FOOTER ======== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Elevate Corporate Team Building.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        document.getElementById('contactForm')?.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thank you for your inquiry. Our corporate planning team will reach out within 24 hours.');
+            e.target.reset();
+        });
+    </script>
+</body>
+</html>

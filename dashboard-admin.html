@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Elevate</title>
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+<body>
+
+    <div class="dashboard-layout">
+        
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-brand">
+                <a href="index.html" style="color: var(--primary); font-family: var(--font-heading); font-weight: 700;">Elevate<span style="color: var(--secondary)">.</span> <span style="font-size: 0.85rem; font-family: var(--font-body); font-weight: 500; color: #d32f2f;">ADMIN</span></a>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="#" class="active" data-tab="master-events"><i class="fa-solid fa-calendar-days"></i> Master Events Map</a></li>
+                    <li><a href="#" data-tab="clients"><i class="fa-solid fa-building"></i> Client Management</a></li>
+                    <li><a href="#" data-tab="waiver-verify"><i class="fa-solid fa-signature"></i> Waiver Verification</a></li>
+                    <li><a href="#" data-tab="media-upload"><i class="fa-solid fa-cloud-arrow-up"></i> Media Uploader</a></li>
+                    <li><a href="#" data-tab="analytics"><i class="fa-solid fa-chart-line"></i> Global Analytics</a></li>
+                </ul>
+            </nav>
+
+            <div class="sidebar-footer">
+                <a href="login.html" style="color: #d32f2f; display: flex; align-items: center; gap: 0.5rem; font-weight: 500;"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout Admin</a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="dashboard-main">
+            
+            <!-- Dashboard Header -->
+            <header class="dash-header">
+                <div style="display: flex; align-items: center; gap: 1rem;">
+                    <button class="sidebar-toggle" id="sidebarToggle"><i class="fa-solid fa-bars"></i></button>
+                    <div>
+                        <h2 style="margin: 0; font-size: 1.5rem;">Staff Admin Control</h2>
+                        <p style="margin: 0; color: var(--text-light); font-size: 0.875rem;">System Overview</p>
+                    </div>
+                </div>
+                
+                <div style="display: flex; align-items: center; gap: 1.5rem;">
+                    <button id="theme-toggle" style="background:none; border:none; cursor:pointer; color: var(--text-color); font-size: 1.25rem;"><i class="fa-solid fa-moon"></i></button>
+                    <div class="dash-user-profile">
+                        <div class="dash-avatar" style="background: var(--secondary); color: var(--primary);"><i class="fa-solid fa-user-shield"></i></div>
+                        <div style="font-weight: 600;">System Admin</div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- TABS CONTAINER -->
+            <div id="tab-master-events" class="tab-content active">
+                
+                <!-- Metrics -->
+                <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); margin-bottom: 2rem;">
+                    <div class="dash-card">
+                        <p style="color: var(--text-light); margin-bottom: 0.5rem; font-size: 0.875rem;">Active Bookings (This Month)</p>
+                        <h3 style="font-size: 2rem; margin: 0;">12</h3>
+                    </div>
+                    <div class="dash-card">
+                        <p style="color: var(--text-light); margin-bottom: 0.5rem; font-size: 0.875rem;">Total Revenue Projected</p>
+                        <h3 style="font-size: 2rem; margin: 0; color: #2E7D32;">$94,500</h3>
+                    </div>
+                    <div class="dash-card">
+                        <p style="color: var(--text-light); margin-bottom: 0.5rem; font-size: 0.875rem;">Pending Media Uploads</p>
+                        <h3 style="font-size: 2rem; margin: 0; color: #E65100;">3</h3>
+                    </div>
+                </div>
+
+                <!-- Live Client Roster -->
+                <div class="dash-card">
+                    <div class="dash-card-header">
+                        <h3>Upcoming Events Schedule</h3>
+                        <div style="display: flex; gap: 0.5rem;">
+                            <button class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.875rem;">Filter by Date</button>
+                            <button class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.875rem;">+ Manual Override Book</button>
+                        </div>
+                    </div>
+                    <table class="dash-table">
+                        <thead>
+                            <tr>
+                                <th>Client</th>
+                                <th>Activity Type</th>
+                                <th>Date</th>
+                                <th>Pax</th>
+                                <th>Waiver Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong style="color: var(--primary)">Acme Corp</strong></td>
+                                <td>River Rapids Challenge</td>
+                                <td>Oct 15, 2026</td>
+                                <td>24</td>
+                                <td><span class="status-badge status-pending">75% Signed</span></td>
+                                <td><a href="#" style="color: var(--primary); font-weight: 500;">Manage</a></td>
+                            </tr>
+                            <tr>
+                                <td><strong style="color: var(--primary)">TechFlow Inc</strong></td>
+                                <td>Mountain Survival</td>
+                                <td>Oct 18, 2026</td>
+                                <td>15</td>
+                                <td><span class="status-badge status-valid">100% Cleared</span></td>
+                                <td><a href="#" style="color: var(--primary); font-weight: 500;">Manage</a></td>
+                            </tr>
+                            <tr>
+                                <td><strong style="color: var(--primary)">Apex Financial</strong></td>
+                                <td>Executive Retreat Custom</td>
+                                <td>Nov 02, 2026</td>
+                                <td>8</td>
+                                <td><span class="status-badge status-action">0% Signed</span></td>
+                                <td><a href="#" style="color: var(--primary); font-weight: 500;">Manage</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- MEDIA UPLOADER TAB (Admin specific) -->
+            <div id="tab-media-upload" class="tab-content" style="display: none;">
+                <div class="grid" style="grid-template-columns: 1fr; gap: 2rem;">
+                    
+                    <div class="dash-card">
+                        <h3 style="margin-bottom: 1rem;">Batch Upload Event Content</h3>
+                        <p style="color: var(--text-light); margin-bottom: 1.5rem;">Upload zip files or raw media to attach directly to a corporate client's post-event gallery.</p>
+                        
+                        <div class="form-group" style="max-width: 400px;">
+                            <label class="form-label">Select Client Event</label>
+                            <select class="form-control">
+                                <option>TechFlow Inc - Mountain Survival (Oct 5)</option>
+                                <option>Stark Industries - Rock Climbing (Oct 1)</option>
+                            </select>
+                        </div>
+
+                        <div style="border: 2px dashed var(--border-color); border-radius: 8px; padding: 4rem 2rem; text-align: center; background: rgba(0,0,0,0.02); margin-bottom: 1.5rem; transition: background 0.3s; cursor: pointer;">
+                            <i class="fa-solid fa-cloud-arrow-up" style="font-size: 3rem; color: var(--secondary); margin-bottom: 1rem;"></i>
+                            <h4>Drag & Drop Media Files</h5>
+                            <p style="color: var(--text-light); font-size: 0.875rem;">Supports JPG, MP4, raw ZIP bundles up to 5GB per drag.</p>
+                            <button class="btn btn-outline" style="margin-top: 1rem;">Browse Files</button>
+                        </div>
+                    </div>
+
+                    <div class="dash-card">
+                        <h3 style="margin-bottom: 1.5rem;">Recent Dispatches</h3>
+                        <table class="dash-table">
+                            <thead>
+                                <tr>
+                                    <th>Event</th>
+                                    <th>Files Processed</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Stark Industries - Rock Climbing</td>
+                                    <td>142 Photos, 4 Videos</td>
+                                    <td><span class="status-badge status-valid">Delivered to Client Dashboard</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- OTHER TABS (Placeholder for Clients, Waiver Verify, Analytics) -->
+            <div id="tab-clients" class="tab-content" style="display: none;">
+                <div class="dash-card"><p>Full CRM Client list and contact history will populate here.</p></div>
+            </div>
+            <div id="tab-waiver-verify" class="tab-content" style="display: none;">
+                <div class="dash-card"><p>Legal master-view for flagging disputed or incomplete waivers across all active rosters.</p></div>
+            </div>
+            <div id="tab-analytics" class="tab-content" style="display: none;">
+                <div class="dash-card"><p>Financial quarters, package popularity, and instructor-to-pax ratio metrics.</p></div>
+            </div>
+            
+        </main>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/dashboard.js"></script>
+</body>
+</html>

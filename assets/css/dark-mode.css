@@ -1,0 +1,67 @@
+/* Dark Mode Variables and Overrides */
+
+body.dark-mode {
+    --bg-color: #0d1611; /* Even darker than primary for deep background */
+    --text-color: #F5F2E8; /* Accent Cream */
+    --text-light: #A0A0A0;
+    --border-color: #1A3A2A;
+    --card-bg: #0F2A1D; /* Primary Dark Green as card bg */
+    
+    --primary: #C9A44C; /* Gold becomes primary highlight in dark mode */
+    --secondary: #F5F2E8; 
+}
+
+body.dark-mode h1, 
+body.dark-mode h2, 
+body.dark-mode h3, 
+body.dark-mode h4, 
+body.dark-mode h5, 
+body.dark-mode h6 {
+    color: var(--secondary);
+}
+
+body.dark-mode .nav-brand {
+    color: var(--secondary);
+}
+
+body.dark-mode .navbar {
+    background-color: var(--bg-color);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+body.dark-mode .nav-links a {
+    color: var(--text-color);
+}
+
+body.dark-mode .nav-links a:hover {
+    color: var(--primary);
+}
+
+body.dark-mode .nav-controls button,
+body.dark-mode .hamburger {
+    color: var(--secondary);
+}
+
+body.dark-mode .btn-primary {
+    background-color: var(--primary);
+    color: #0F2A1D;
+}
+
+body.dark-mode .btn-primary:hover {
+    background-color: var(--secondary);
+    color: #0F2A1D;
+}
+
+body.dark-mode .btn-outline {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+body.dark-mode .btn-outline:hover {
+    background-color: var(--primary);
+    color: #0F2A1D;
+}
+
+body.dark-mode .footer {
+    background-color: #07150e; /* Even deeper green for dark mode footers */
+}

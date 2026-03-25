@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Experience - Elevate</title>
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+    <style>
+        .booking-steps {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            margin-bottom: 3rem;
+            max-width: 600px;
+            margin-inline: auto;
+        }
+        .booking-steps::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--border-color);
+            z-index: 1;
+        }
+        .step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            position: relative;
+            z-index: 2;
+        }
+        .step-circle {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--card-bg);
+            border: 2px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            color: var(--text-light);
+            transition: all var(--transition-normal);
+        }
+        .step.active .step-circle {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: var(--accent);
+        }
+        .step.completed .step-circle {
+            background: var(--secondary);
+            border-color: var(--secondary);
+            color: var(--primary);
+        }
+        .step-label {
+            font-size: 0.875rem;
+            color: var(--text-light);
+            font-weight: 500;
+        }
+        .step.active .step-label { color: var(--primary); }
+        .step-content { display: none; }
+        .step-content.active { display: block; animation: fadeIn 0.3s ease; }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .booking-card {
+            background: var(--card-bg);
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow-lg);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .summary-card {
+            background: rgba(0,0,0,0.02);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+        
+        body.dark-mode .step.active .step-circle { color: #0F2A1D; }
+        body.dark-mode .step.completed .step-circle { color: #0F2A1D; }
+    </style>
+</head>
+<body style="background-color: var(--bg-color);">
+
+    <!-- ======== NAVBAR ======== -->
+    <header class="navbar" style="position: relative; box-shadow: none;">
+        <div class="container">
+            <a href="index.html" class="nav-brand">Elevate<span style="color: var(--secondary)">.</span></a>
+            <div class="nav-controls">
+                <a href="activities.html" class="btn btn-outline" style="padding: 0.5rem 1.5rem; font-size: 0.875rem;">Cancel Booking</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ======== BOOKING WIZARD ======== -->
+    <section class="section">
+        <div class="container">
+            
+            <!-- Progress Steps -->
+            <div class="booking-steps">
+                <div class="step active" id="step-indicator-1">
+                    <div class="step-circle">1</div>
+                    <div class="step-label">Event Details</div>
+                </div>
+                <div class="step" id="step-indicator-2">
+                    <div class="step-circle">2</div>
+                    <div class="step-label">Corporate Info</div>
+                </div>
+                <div class="step" id="step-indicator-3">
+                    <div class="step-circle">3</div>
+                    <div class="step-label">Confirmation</div>
+                </div>
+            </div>
+
+            <!-- Booking Card -->
+            <div class="booking-card">
+                
+                <!-- STEP 1: Details -->
+                <div class="step-content active" id="step-1">
+                    <h2 style="margin-bottom: 2rem;">Configure Your Experience</h2>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Selected Activity</label>
+                        <select class="form-control" style="font-size: 1.125rem; font-weight: 500;">
+                            <option>River Rapids Challenge ($3,500 base)</option>
+                            <option>Mountain Survival Strategy ($5,000 base)</option>
+                            <option>Vertical Ascent ($4,200 base)</option>
+                        </select>
+                    </div>
+
+                    <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem;">
+                        <div>
+                            <label class="form-label">Date Preference</label>
+                            <input type="date" class="form-control">
+                        </div>
+                        <div>
+                            <label class="form-label">Team Size (Pax)</label>
+                            <input type="number" class="form-control" value="15" min="5" max="100">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Activity Upgrades</label>
+                        <div style="display: flex; flex-direction: column; gap: 1rem; margin-top: 1rem;">
+                            <label style="display: flex; align-items: center; gap: 1rem; border: 1px solid var(--border-color); padding: 1rem; border-radius: 8px; cursor: pointer;">
+                                <input type="checkbox" checked style="width: 18px; height: 18px;">
+                                <div style="flex-grow: 1;">
+                                    <h4 style="margin: 0;">Professional Media Package</h4>
+                                    <p style="margin: 0; font-size: 0.85rem; color: var(--text-light);">Drone footage and professional photography.</p>
+                                </div>
+                                <div style="font-weight: 600;">+$800</div>
+                            </label>
+                            
+                            <label style="display: flex; align-items: center; gap: 1rem; border: 1px solid var(--border-color); padding: 1rem; border-radius: 8px; cursor: pointer;">
+                                <input type="checkbox" style="width: 18px; height: 18px;">
+                                <div style="flex-grow: 1;">
+                                    <h4 style="margin: 0;">Executive Catering</h4>
+                                    <p style="margin: 0; font-size: 0.85rem; color: var(--text-light);">Premium lunch and post-event reception.</p>
+                                </div>
+                                <div style="font-weight: 600;">+$1,200</div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; justify-content: flex-end; margin-top: 3rem;">
+                        <button class="btn btn-primary" onclick="nextStep(2)">Continue to Corporate Info <i class="fa-solid fa-arrow-right" style="margin-left: 0.5rem;"></i></button>
+                    </div>
+                </div>
+
+                <!-- STEP 2: Corporate Info -->
+                <div class="step-content" id="step-2">
+                    <h2 style="margin-bottom: 2rem;">Corporate Details</h2>
+                    
+                    <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 1.5rem;">
+                        <div>
+                            <label class="form-label">HR / Coordinator Name</label>
+                            <input type="text" class="form-control" placeholder="John Doe">
+                        </div>
+                        <div>
+                            <label class="form-label">Corporate Email</label>
+                            <input type="email" class="form-control" placeholder="john@company.com">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Company Name</label>
+                        <input type="text" class="form-control" placeholder="Acme Corp">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Billing Address</label>
+                        <input type="text" class="form-control" placeholder="123 Financial District" style="margin-bottom: 1rem;">
+                        <div class="grid" style="grid-template-columns: 2fr 1fr 1fr; gap: 1rem;">
+                            <input type="text" class="form-control" placeholder="City">
+                            <input type="text" class="form-control" placeholder="State">
+                            <input type="text" class="form-control" placeholder="Zip">
+                        </div>
+                    </div>
+
+                    <div style="display: flex; justify-content: space-between; margin-top: 3rem;">
+                        <button class="btn btn-outline" onclick="prevStep(1)"><i class="fa-solid fa-arrow-left" style="margin-right: 0.5rem;"></i> Back</button>
+                        <button class="btn btn-primary" onclick="nextStep(3)">Review & Confirm <i class="fa-solid fa-arrow-right" style="margin-left: 0.5rem;"></i></button>
+                    </div>
+                </div>
+
+                <!-- STEP 3: Confirmation -->
+                <div class="step-content" id="step-3">
+                    <div style="text-align: center; margin-bottom: 2rem;">
+                        <i class="fa-solid fa-file-invoice" style="font-size: 3rem; color: var(--primary); margin-bottom: 1rem;"></i>
+                        <h2>Review Your Invoice</h2>
+                        <p style="color: var(--text-light);">No payment required today. An invoice will be sent to the coordinator's email following approval.</p>
+                    </div>
+                    
+                    <div class="summary-card" style="margin-bottom: 2rem;">
+                        <h4 style="margin-bottom: 1rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem;">River Rapids Challenge</h4>
+                        
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                            <span style="color: var(--text-light);">Base Package (up to 15 pax)</span>
+                            <span>$3,500.00</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                            <span style="color: var(--text-light);">Professional Media Package</span>
+                            <span>$800.00</span>
+                        </div>
+                        
+                        <div style="display: flex; justify-content: space-between; margin-top: 1.5rem; padding-top: 1rem; border-top: 1px dashed var(--border-color); font-weight: 700; font-size: 1.25rem;">
+                            <span>Total Estimated Investment</span>
+                            <span style="color: var(--primary);">$4,300.00</span>
+                        </div>
+                    </div>
+
+                    <div class="form-group" style="display: flex; align-items: flex-start; gap: 0.5rem;">
+                        <input type="checkbox" id="terms" style="width: 18px; height: 18px; margin-top: 0.25rem;">
+                        <label for="terms" style="font-size: 0.875rem; color: var(--text-light);">I understand this is a requested booking and a coordinator will contact me within 24 hours to secure the deposit and initialize the dashboard.</label>
+                    </div>
+
+                    <div style="display: flex; justify-content: space-between; margin-top: 2rem;">
+                        <button class="btn btn-outline" onclick="prevStep(2)"><i class="fa-solid fa-arrow-left" style="margin-right: 0.5rem;"></i> Back</button>
+                        <button class="btn btn-secondary" onclick="submitBooking()">Submit Booking Request</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        function nextStep(step) {
+            // Update indicators
+            document.querySelectorAll('.step').forEach(s => s.classList.remove('active'));
+            document.getElementById('step-indicator-' + (step-1)).classList.add('completed');
+            document.getElementById('step-indicator-' + step).classList.add('active');
+            
+            // Show content
+            document.querySelectorAll('.step-content').forEach(c => c.classList.remove('active'));
+            document.getElementById('step-' + step).classList.add('active');
+            window.scrollTo(0,0);
+        }
+
+        function prevStep(step) {
+            // Update indicators
+            document.querySelectorAll('.step').forEach(s => s.classList.remove('active'));
+            document.getElementById('step-indicator-' + step).classList.remove('completed');
+            document.getElementById('step-indicator-' + step).classList.add('active');
+            
+            // Show content
+            document.querySelectorAll('.step-content').forEach(c => c.classList.remove('active'));
+            document.getElementById('step-' + step).classList.add('active');
+            window.scrollTo(0,0);
+        }
+
+        function submitBooking() {
+            const btn = document.querySelector('#step-3 .btn-secondary');
+            btn.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin"></i> Processing...';
+            setTimeout(() => {
+                alert("Booking Request Submitted Successfully! Redirecting to your dashboard.");
+                window.location.href = "dashboard-user.html";
+            }, 1500);
+        }
+    </script>
+</body>
+</html>

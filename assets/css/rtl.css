@@ -1,0 +1,52 @@
+/* RTL Layout Adjustments */
+
+html[dir="rtl"] {
+    text-align: right;
+}
+
+html[dir="rtl"] body {
+    direction: rtl;
+}
+
+/* Adjust margins and paddings for RTL */
+html[dir="rtl"] .nav-links {
+    margin-right: auto;
+    margin-left: 0;
+}
+
+html[dir="rtl"] @media (max-width: 991px) {
+    .nav-links {
+        right: auto;
+        left: -100%;
+        transition: left var(--transition-normal);
+    }
+    
+    .nav-links.active {
+        left: 0;
+    }
+}
+
+/* Margin utilities reversal */
+html[dir="rtl"] .ml-auto {
+    margin-right: auto;
+    margin-left: 0 !important;
+}
+
+html[dir="rtl"] .mr-auto {
+    margin-left: auto;
+    margin-right: 0 !important;
+}
+
+/* Padding utilities reversal */
+html[dir="rtl"] .pl-1 { padding-right: 0.25rem; padding-left: 0; }
+html[dir="rtl"] .pr-1 { padding-left: 0.25rem; padding-right: 0; }
+/* Add more as needed based on classes used */
+
+/* Icons usually need mirroring if they are directional (like arrows) */
+html[dir="rtl"] .icon-arrow-right {
+    transform: scaleX(-1);
+}
+
+html[dir="rtl"] .icon-arrow-left {
+    transform: scaleX(-1);
+}

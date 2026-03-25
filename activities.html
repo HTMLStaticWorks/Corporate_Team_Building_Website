@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activities - Elevate</title>
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+<body>
+
+    <!-- ======== NAVBAR ======== -->
+    <header class="navbar">
+        <div class="container">
+            <a href="index.html" class="nav-brand">Elevate<span style="color: var(--secondary)">.</span></a>
+            
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="activities.html" style="color: var(--primary)">Activities</a>
+                <a href="solutions.html">Corporate Solutions</a>
+                <a href="pricing.html">Pricing</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            
+            <div class="nav-controls">
+                <button id="theme-toggle" aria-label="Toggle Dark Mode"><i class="fa-solid fa-moon"></i></button>
+                <button id="rtl-toggle" aria-label="Toggle RTL"><i class="fa-solid fa-language"></i></button>
+                <a href="login.html" class="btn btn-primary" style="padding: 0.5rem 1.5rem; font-size: 0.875rem;">Client Login</a>
+                <button class="hamburger" aria-label="Toggle navigation"><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ======== PAGE HEADER ======== -->
+    <section class="section" style="padding-top: 150px; padding-bottom: 4rem; background-color: var(--bg-color);">
+        <div class="container">
+            <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+                <h1 style="font-size: clamp(2.5rem, 5vw, 3.5rem); margin-bottom: 1rem;">Corporate Activities</h1>
+                <p style="color: var(--text-light); font-size: 1.25rem;">Filter by difficulty, duration, and objective to find the perfect adventure for your team.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======== ACTIVITIES GRID STORE ======== -->
+    <section class="section" style="padding-top: 2rem;">
+        <div class="container">
+            <!-- Filter Bar Placeholder -->
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 3rem; flex-wrap: wrap; gap: 1rem; padding: 1rem; background: var(--card-bg); border-radius: 8px; box-shadow: var(--shadow-sm);">
+                <div style="display: flex; gap: 1rem;">
+                    <select class="form-control" style="width: auto;">
+                        <option>Difficulty: All</option>
+                        <option>Beginner</option>
+                        <option>Intermediate</option>
+                        <option>Advanced</option>
+                    </select>
+                    <select class="form-control" style="width: auto;">
+                        <option>Objective: All</option>
+                        <option>Leadership</option>
+                        <option>Communication</option>
+                        <option>Trust Building</option>
+                    </select>
+                </div>
+                <div style="font-weight: 600; color: var(--text-light);">Showing 6 Experiences</div>
+            </div>
+
+            <!-- Grid of all activities -->
+            <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));">
+                
+                <div class="activity-card">
+                    <div class="card-img">
+                        <span class="badge">Most Popular</span>
+                        <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="River Rafting">
+                    </div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span><i class="fa-regular fa-clock" style="color: var(--primary);"></i> 4 Hours</span>
+                            <span><i class="fa-solid fa-user-group" style="color: var(--primary);"></i> 10-50 People</span>
+                        </div>
+                        <h3 style="margin-bottom: 0.5rem; font-size: 1.5rem;">River Rapids Challenge</h3>
+                        <p style="color: var(--text-light); margin-bottom: 1.5rem; flex-grow: 1;">Navigate powerful rapids as a synchronized unit. Develops intense trust and immediate communication under pressure.</p>
+                        <hr>
+                        <a href="login.html" class="btn btn-outline" style="width: 100%;">Book This Activity</a>
+                    </div>
+                </div>
+
+                <div class="activity-card">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1551698618-1dfe5d97d256?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Mountain Survival Strategy">
+                    </div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span><i class="fa-regular fa-clock" style="color: var(--primary);"></i> 1-2 Days</span>
+                            <span><i class="fa-solid fa-user-group" style="color: var(--primary);"></i> 5-20 People</span>
+                        </div>
+                        <h3 style="margin-bottom: 0.5rem; font-size: 1.5rem;">Mountain Survival Strategy</h3>
+                        <p style="color: var(--text-light); margin-bottom: 1.5rem; flex-grow: 1;">A strategic simulation where teams map routes, ration supplies, and make critical leadership decisions.</p>
+                        <hr>
+                        <a href="login.html" class="btn btn-outline" style="width: 100%;">Book This Activity</a>
+                    </div>
+                </div>
+
+                 <div class="activity-card">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1533692328991-08159ff19fca?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Wilderness Trek">
+                    </div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span><i class="fa-regular fa-clock" style="color: var(--primary);"></i> 8 Hours</span>
+                            <span><i class="fa-solid fa-user-group" style="color: var(--primary);"></i> 10-30 People</span>
+                        </div>
+                        <h3 style="margin-bottom: 0.5rem; font-size: 1.5rem;">Wilderness Orientation Trek</h3>
+                        <p style="color: var(--text-light); margin-bottom: 1.5rem; flex-grow: 1;">A collaborative orienteering trek that requires solving riddles and relying on compass skills to reach checkpoints.</p>
+                        <hr>
+                        <a href="login.html" class="btn btn-outline" style="width: 100%;">Book This Activity</a>
+                    </div>
+                </div>
+
+                <div class="activity-card">
+                    <div class="card-img">
+                         <span class="badge">High Intensity</span>
+                        <img src="https://images.unsplash.com/photo-1522163182402-834f871fd851?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Rock Climbing">
+                    </div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span><i class="fa-regular fa-clock" style="color: var(--primary);"></i> 6 Hours</span>
+                            <span><i class="fa-solid fa-user-group" style="color: var(--primary);"></i> 5-15 People</span>
+                        </div>
+                        <h3 style="margin-bottom: 0.5rem; font-size: 1.5rem;">Vertical Ascent</h3>
+                        <p style="color: var(--text-light); margin-bottom: 1.5rem; flex-grow: 1;">Collaborative rock climbing where teams must rely entirely on their peers for safety, belaying, and guidance.</p>
+                        <hr>
+                        <a href="login.html" class="btn btn-outline" style="width: 100%;">Book This Activity</a>
+                    </div>
+                </div>
+
+                 <div class="activity-card">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1517400508447-f8dd518b86db?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="48-Hour Drop">
+                    </div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span><i class="fa-regular fa-clock" style="color: var(--primary);"></i> 48 Hours</span>
+                            <span><i class="fa-solid fa-user-group" style="color: var(--primary);"></i> 10-25 People</span>
+                        </div>
+                        <h3 style="margin-bottom: 0.5rem; font-size: 1.5rem;">The 48-Hour Drop</h3>
+                        <p style="color: var(--text-light); margin-bottom: 1.5rem; flex-grow: 1;">Dropped in a remote location with minimal supplies. Teams must navigate, build shelter, and signal for extraction.</p>
+                        <hr>
+                        <a href="login.html" class="btn btn-outline" style="width: 100%;">Book This Activity</a>
+                    </div>
+                </div>
+
+                 <div class="activity-card">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Obstacle Course">
+                    </div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span><i class="fa-regular fa-clock" style="color: var(--primary);"></i> 3 Hours</span>
+                            <span><i class="fa-solid fa-user-group" style="color: var(--primary);"></i> 20-100 People</span>
+                        </div>
+                        <h3 style="margin-bottom: 0.5rem; font-size: 1.5rem;">Mud Titan Obstacle Run</h3>
+                        <p style="color: var(--text-light); margin-bottom: 1.5rem; flex-grow: 1;">A classic large-scale obstacle muddy course focusing on 'leave no one behind' mentalities and high-energy encouragement.</p>
+                        <hr>
+                        <a href="login.html" class="btn btn-outline" style="width: 100%;">Book This Activity</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ======== CTA SECTION ======== -->
+    <section class="section cta-section">
+        <div class="container" style="position: relative; z-index: 1;">
+            <h2>Need a Custom Blueprint?</h2>
+            <p>We can design an activity specific to your exact corporate metrics and duration.</p>
+            <a href="contact.html" class="btn btn-secondary" style="font-size: 1.125rem; padding: 1rem 3rem;">Inquire Custom Activity</a>
+        </div>
+    </section>
+
+    <!-- ======== FOOTER ======== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                
+                <div class="footer-brand">
+                    <a href="index.html" class="nav-brand" style="margin-bottom: 1.5rem; display: block; color: var(--secondary);">Elevate<span style="color: var(--accent)">.</span></a>
+                    <p style="color: rgba(245, 242, 232, 0.7); max-width: 300px; margin-bottom: 1.5rem;">Luxury adventure-based team building for the world's leading organizations.</p>
+                    <div class="socials">
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Platform</h4>
+                    <ul>
+                        <li><a href="activities.html">Activities & Services</a></li>
+                        <li><a href="solutions.html">Corporate Solutions</a></li>
+                        <li><a href="pricing.html">Pricing & Packages</a></li>
+                        <li><a href="login.html">Client Dashboard</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="gallery.html">Event Gallery</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="coming-soon.html">Careers</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><i class="fa-solid fa-location-dot" style="color: var(--secondary); margin-right: 0.5rem; width: 16px;"></i> 100 Adventure Way, Suite 400<br>Denver, CO 80202</li>
+                        <li><i class="fa-solid fa-phone" style="color: var(--secondary); margin-right: 0.5rem; width: 16px;"></i> +1 (800) 555-TEAM</li>
+                        <li><i class="fa-solid fa-envelope" style="color: var(--secondary); margin-right: 0.5rem; width: 16px;"></i> hello@elevate-teams.com</li>
+                    </ul>
+                </div>
+
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Elevate Corporate Team Building. All rights reserved.</p>
+                <div class="legal-links">
+                    <a href="404.html">Privacy Policy</a>
+                    <a href="404.html">Terms of Service</a>
+                    <a href="404.html">Safety Documentation</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

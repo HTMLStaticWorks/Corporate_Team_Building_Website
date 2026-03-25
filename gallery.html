@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Elevate</title>
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+    <style>
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-auto-rows: 250px;
+            gap: 1.5rem;
+        }
+        .gallery-item {
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform var(--transition-slow);
+        }
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+        .gallery-item.large {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+        @media(max-width: 768px) {
+            .gallery-item.large {
+                grid-column: span 1;
+                grid-row: span 1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ======== NAVBAR ======== -->
+    <header class="navbar">
+        <div class="container">
+            <a href="index.html" class="nav-brand">Elevate<span style="color: var(--secondary)">.</span></a>
+            
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="activities.html">Activities</a>
+                <a href="solutions.html">Corporate Solutions</a>
+                <a href="pricing.html">Pricing</a>
+                <a href="gallery.html" style="color: var(--primary)">Gallery</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            
+            <div class="nav-controls">
+                <button id="theme-toggle" aria-label="Toggle Dark Mode"><i class="fa-solid fa-moon"></i></button>
+                <button id="rtl-toggle" aria-label="Toggle RTL"><i class="fa-solid fa-language"></i></button>
+                <a href="login.html" class="btn btn-primary" style="padding: 0.5rem 1.5rem; font-size: 0.875rem;">Client Login</a>
+                <button class="hamburger" aria-label="Toggle navigation"><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ======== PAGE HEADER ======== -->
+    <section class="section" style="padding-top: 150px; padding-bottom: 4rem; background-color: var(--bg-color);">
+        <div class="container">
+            <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+                <h1 style="font-size: clamp(2.5rem, 5vw, 3.5rem); margin-bottom: 1rem;">Action Gallery</h1>
+                <p style="color: var(--text-light); font-size: 1.25rem;">Real teams. Real challenges. Real transformations.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======== GALLERY GRID ======== -->
+    <section class="section" style="padding-top: 2rem;">
+        <div class="container">
+            <div class="gallery-grid">
+                
+                <div class="gallery-item large">
+                    <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="River Rafting">
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1551698618-1dfe5d97d256?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Mountain Survival">
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1522163182402-834f871fd851?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Rock Climbing">
+                </div>
+
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1517400508447-f8dd518b86db?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Forest Trek">
+                </div>
+
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Mud Run">
+                </div>
+
+                <div class="gallery-item large">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Team Discussion">
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1533692328991-08159ff19fca?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Hiking">
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- ======== CTA ======== -->
+    <section class="section cta-section">
+        <div class="container" style="position: relative; z-index: 1;">
+            <h2>Picture Your Team Here.</h2>
+            <p>Our professional media packages ensure every success is documented.</p>
+            <a href="contact.html" class="btn btn-secondary" style="font-size: 1.125rem; padding: 1rem 3rem;">Start Planning</a>
+        </div>
+    </section>
+
+    <!-- ======== FOOTER ======== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Elevate Corporate Team Building. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
