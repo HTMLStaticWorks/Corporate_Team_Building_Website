@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pricing - Elevate</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><path fill='%23C9A44C' d='M256 32L0 480h512L256 32z'/></svg>">
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
@@ -17,10 +19,16 @@
     <!-- ======== NAVBAR ======== -->
     <header class="navbar">
         <div class="container">
-            <a href="index.html" class="nav-brand">Elevate<span style="color: var(--secondary)">.</span></a>
+            <a href="index.html" class="nav-brand"><i class="fa-solid fa-mountain" style="color: var(--secondary); margin-right: 0.5rem;"></i>Elevate</a>
             
             <nav class="nav-links">
-                <a href="index.html">Home</a>
+                <div class="nav-dropdown">
+                    <a href="#" class="dropdown-toggle">Home <i class="fa-solid fa-chevron-down" style="font-size: 0.75rem; margin-left: 0.25rem;"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="index.html">Home 1 (Corporate)</a>
+                        <a href="index-2.html">Home 2 (Adventure)</a>
+                    </div>
+                </div>
                 <a href="activities.html">Activities</a>
                 <a href="solutions.html">Corporate Solutions</a>
                 <a href="pricing.html" style="color: var(--primary)">Pricing</a>
@@ -51,7 +59,7 @@
     <!-- ======== PRICING TABLES ======== -->
     <section class="section">
         <div class="container">
-            <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); align-items: center;">
+            <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); align-items: center; justify-content: center;">
                 
                 <!-- Basic -->
                 <div style="background: var(--card-bg); padding: 3rem; border-radius: 12px; border: 1px solid var(--border-color); box-shadow: var(--shadow-sm); text-align: center;">
@@ -141,13 +149,18 @@
 
     <!-- ======== FOOTER ======== -->
     <footer class="footer">
-        <!-- Footer Content Omitted for brevity, using same standard footer structure -->
         <div class="container">
             <div class="footer-grid">
                 
                 <div class="footer-brand">
-                    <a href="index.html" class="nav-brand" style="margin-bottom: 1.5rem; display: block; color: var(--secondary);">Elevate<span style="color: var(--accent)">.</span></a>
+                    <a href="index.html" class="nav-brand" style="margin-bottom: 1.5rem; display: block; color: var(--secondary);"><i class="fa-solid fa-mountain" style="color: var(--secondary); margin-right: 0.5rem;"></i>Elevate</a>
                     <p style="color: rgba(245, 242, 232, 0.7); max-width: 300px; margin-bottom: 1.5rem;">Luxury adventure-based team building for the world's leading organizations.</p>
+                    <div class="socials">
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                    </div>
                 </div>
 
                 <div class="footer-links">
@@ -164,13 +177,30 @@
                     <h4>Company</h4>
                     <ul>
                         <li><a href="about.html">About Us</a></li>
+                        <li><a href="gallery.html">Event Gallery</a></li>
                         <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="coming-soon.html">Careers</a></li>
                     </ul>
                 </div>
+
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><i class="fa-solid fa-location-dot"></i> 100 Adventure Way, Suite 400<br>Denver, CO 80202</li>
+                        <li><i class="fa-solid fa-phone"></i> +1 (800) 555-TEAM</li>
+                        <li><i class="fa-solid fa-envelope"></i> hello@elevate-teams.com</li>
+                    </ul>
+                </div>
+
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2026 Elevate Corporate Team Building.</p>
+                <p>&copy; 2026 Elevate Corporate Team Building. All rights reserved.</p>
+                <div class="legal-links">
+                    <a href="404.html">Privacy Policy</a>
+                    <a href="404.html">Terms of Service</a>
+                    <a href="404.html">Safety Documentation</a>
+                </div>
             </div>
         </div>
     </footer>

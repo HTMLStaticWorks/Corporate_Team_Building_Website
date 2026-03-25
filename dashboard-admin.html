@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard - Elevate</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><path fill='%23C9A44C' d='M256 32L0 480h512L256 32z'/></svg>">
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- CSS -->
@@ -19,7 +21,7 @@
         <!-- Sidebar -->
         <aside class="sidebar" id="sidebar">
             <div class="sidebar-brand">
-                <a href="index.html" style="color: var(--primary); font-family: var(--font-heading); font-weight: 700;">Elevate<span style="color: var(--secondary)">.</span> <span style="font-size: 0.85rem; font-family: var(--font-body); font-weight: 500; color: #d32f2f;">ADMIN</span></a>
+                <a href="index.html" style="color: var(--primary); font-family: var(--font-heading); font-weight: 700;"><i class="fa-solid fa-mountain" style="color: var(--secondary); margin-right: 0.5rem;"></i>Elevate <span style="font-size: 0.85rem; font-family: var(--font-body); font-weight: 500; color: #d32f2f;">ADMIN</span></a>
             </div>
             
             <nav class="sidebar-nav">
@@ -52,6 +54,7 @@
                 
                 <div style="display: flex; align-items: center; gap: 1.5rem;">
                     <button id="theme-toggle" style="background:none; border:none; cursor:pointer; color: var(--text-color); font-size: 1.25rem;"><i class="fa-solid fa-moon"></i></button>
+                    <button id="rtl-toggle" aria-label="Toggle RTL" style="background:none; border:none; cursor:pointer; color: var(--text-color); font-size: 1.25rem;"><i class="fa-solid fa-language"></i></button>
                     <div class="dash-user-profile">
                         <div class="dash-avatar" style="background: var(--secondary); color: var(--primary);"><i class="fa-solid fa-user-shield"></i></div>
                         <div style="font-weight: 600;">System Admin</div>

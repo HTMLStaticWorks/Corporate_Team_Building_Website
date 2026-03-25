@@ -10,6 +10,19 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // ---- Mobile Dropdown Toggle ----
+    const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+    dropdownToggles.forEach(toggle => {
+        toggle.addEventListener('click', (e) => {
+            // Only toggle on mobile screens
+            if (window.innerWidth <= 991) {
+                e.preventDefault();
+                const parent = toggle.parentElement;
+                parent.classList.toggle('active');
+            }
+        });
+    });
+
     // ---- Dark Mode Toggle ----
     const themeToggleBtn = document.getElementById('theme-toggle');
     

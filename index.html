@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Elevate - Corporate Team Building Experiences</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><path fill='%23C9A44C' d='M256 32L0 480h512L256 32z'/></svg>">
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
@@ -17,10 +19,16 @@
     <!-- ======== NAVBAR ======== -->
     <header class="navbar">
         <div class="container">
-            <a href="index.html" class="nav-brand">Elevate<span style="color: var(--secondary)">.</span></a>
+            <a href="index.html" class="nav-brand"><i class="fa-solid fa-mountain" style="color: var(--secondary); margin-right: 0.5rem;"></i>Elevate</a>
             
             <nav class="nav-links">
-                <a href="index.html">Home</a>
+                <div class="nav-dropdown">
+                    <a href="#" class="dropdown-toggle">Home <i class="fa-solid fa-chevron-down" style="font-size: 0.75rem; margin-left: 0.25rem;"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="index.html">Home 1 (Corporate)</a>
+                        <a href="index-2.html">Home 2 (Adventure)</a>
+                    </div>
+                </div>
                 <a href="activities.html">Activities</a>
                 <a href="solutions.html">Corporate Solutions</a>
                 <a href="pricing.html">Pricing</a>
@@ -47,13 +55,28 @@
     <!-- ======== HERO SECTION (Home 1 - Corporate Focus) ======== -->
     <section class="hero corporate-hero" style="background-image: url('https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')">
         <div class="container">
-            <div class="hero-content">
+            <div class="hero-content" style="text-align: center; margin: 0 auto; display: flex; flex-direction: column; align-items: center;">
                 <h1>Build Stronger Teams Through <span style="color: var(--secondary); font-style: italic;">Adventure.</span></h1>
-                <p class="hero-subtitle">Elevate your corporate culture with luxury, results-driven team-building experiences designed for HR leaders and enterprise teams.</p>
-                <div class="hero-actions">
+                <p class="hero-subtitle" style="margin-left: auto; margin-right: auto; text-align: center;">Elevate your corporate culture with luxury, results-driven team-building experiences designed for HR leaders and enterprise teams.</p>
+                <div class="hero-actions" style="justify-content: center; width: 100%;">
                     <a href="activities.html" class="btn btn-secondary">Explore Experiences</a>
                     <a href="contact.html" class="btn btn-outline" style="border-color: var(--accent); color: var(--accent);">Request a Proposal</a>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======== TRUSTED BY ======== -->
+    <section style="padding: 3rem 0; border-bottom: 1px solid var(--border-color); background: var(--card-bg);">
+        <div class="container">
+            <p style="text-align: center; font-size: 0.875rem; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; color: var(--text-light); margin-bottom: 2rem;">Trusted by Industry Leaders</p>
+            <div class="logo-cloud">
+                <i class="fa-brands fa-google"></i>
+                <i class="fa-brands fa-microsoft"></i>
+                <i class="fa-brands fa-amazon"></i>
+                <i class="fa-brands fa-apple"></i>
+                <i class="fa-brands fa-meta"></i>
+                <i class="fa-brands fa-airbnb"></i>
             </div>
         </div>
     </section>
@@ -66,33 +89,24 @@
                 <p>We solve the toughest team challenges by stepping out of the boardroom and into structured, communicative adventures.</p>
             </div>
             
-            <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+            <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); justify-content: center;">
                 
-                <div class="feature-card">
-                    <div class="icon">
-                        <i class="fa-solid fa-users-rays"></i>
-                    </div>
-                    <h3>Leadership Development</h3>
-                    <p>Uncover hidden leaders through pressure-tested wilderness and obstacle scenarios.</p>
+                <div class="feature-card" style="background-image: linear-gradient(rgba(15, 42, 29, 0.8), rgba(15, 42, 29, 0.8)), url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=800&auto=format&fit=crop'); background-size: cover; background-position: center; color: white; padding: 3rem 2rem; min-height: 350px; display: flex; flex-direction: column; justify-content: center; text-align: center; border: none;">
+                    <h3 style="color: var(--secondary); margin-bottom: 1rem;">Leadership Development</h3>
+                    <p style="color: white;">Uncover hidden leaders through pressure-tested wilderness and obstacle scenarios.</p>
                 </div>
                 
-                <div class="feature-card">
-                    <div class="icon">
-                        <i class="fa-solid fa-comments"></i>
-                    </div>
-                    <h3>Team Communication</h3>
-                    <p>Bridge silos and improve inter-departmental collaboration with interactive problem-solving.</p>
+                <div class="feature-card" style="background-image: linear-gradient(rgba(15, 42, 29, 0.8), rgba(15, 42, 29, 0.8)), url('https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=800&auto=format&fit=crop'); background-size: cover; background-position: center; color: white; padding: 3rem 2rem; min-height: 350px; display: flex; flex-direction: column; justify-content: center; text-align: center; border: none;">
+                    <h3 style="color: var(--secondary); margin-bottom: 1rem;">Team Communication</h3>
+                    <p style="color: white;">Bridge silos and improve inter-departmental collaboration with interactive problem-solving.</p>
                 </div>
                 
-                <div class="feature-card">
-                    <div class="icon">
-                        <i class="fa-solid fa-shield-halved"></i>
-                    </div>
-                    <h3>Safety & Trust</h3>
-                    <p>Built on the foundation of psychological safety. Fully certified instructors and zero-risk environments.</p>
+                <div class="feature-card" style="background-image: linear-gradient(rgba(15, 42, 29, 0.8), rgba(15, 42, 29, 0.8)), url('https://images.unsplash.com/photo-1473448912268-2022ce9509d8?q=80&w=800&auto=format&fit=crop'); background-size: cover; background-position: center; color: white; padding: 3rem 2rem; min-height: 350px; display: flex; flex-direction: column; justify-content: center; text-align: center; border: none;">
+                    <h3 style="color: var(--secondary); margin-bottom: 1rem;">Safety & Trust</h3>
+                    <p style="color: white;">Built on the foundation of psychological safety. Fully certified instructors and zero-risk environments.</p>
                 </div>
 
-            </div>
+
         </div>
     </section>
 
@@ -104,7 +118,7 @@
                 <p>Discover our most sought-after corporate adventures.</p>
             </div>
             
-            <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));">
+            <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); justify-content: center;">
                 
                 <div class="activity-card">
                     <div class="card-img">
@@ -139,6 +153,80 @@
                     </div>
                 </div>
 
+                <div class="activity-card">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1533692328991-08159ff19fca?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Team Orienteering">
+                    </div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span><i class="fa-regular fa-clock" style="color: var(--primary); margin-right: 0.25rem;"></i> 6 Hours</span>
+                            <span><i class="fa-solid fa-user-group" style="color: var(--primary); margin-right: 0.25rem;"></i> 15-100 People</span>
+                        </div>
+                        <h3 style="margin-bottom: 0.5rem; font-size: 1.5rem;">Wilderness Orienteering</h3>
+                        <p style="color: var(--text-light); margin-bottom: 1.5rem; flex-grow: 1;">A high-tech scavenger hunt using GPS and topographic maps. Forces cross-functional teams to align on a single strategy.</p>
+                        <hr>
+                        <a href="activities.html" class="btn btn-outline" style="width: 100%;">View Details</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Testimonials -->
+            <div style="margin-top: 6rem;">
+                <div class="section-header">
+                    <h2>Success Stories</h2>
+                    <p>Hear from the HR directors and CEOs who have transformed their organizations with Elevate.</p>
+                </div>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">"Elevate didn't just give us a break from the office; they gave us a new way to work together. The ROI on our team's communication has been visible since day one."</p>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=200&auto=format&fit=crop" alt="Sarah Jenkins" class="author-img">
+                            <div class="author-info">
+                                <h5>Sarah Jenkins</h5>
+                                <p>VP of People, TechCorp</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">"The survival simulation was the most intense leadership training I've ever experienced. It stripped away titles and forced us to lead through empathy and logic."</p>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop" alt="Marcus Chen" class="author-img">
+                            <div class="author-info">
+                                <h5>Marcus Chen</h5>
+                                <p>CEO, Global Logistics</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======== THE PROCESS ======== -->
+    <section class="section bg-light" style="border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+        <div class="container">
+            <div class="section-header">
+                <h2>The Elevate Journey</h2>
+                <p>A structured approach to transforming team dynamics, from initial discovery to long-term impact analysis.</p>
+            </div>
+            <div class="process-grid">
+                <div class="process-step">
+                    <h4>Discovery</h4>
+                    <p>We analyze your team's current friction points and growth objectives.</p>
+                </div>
+                <div class="process-step">
+                    <h4>Custom Design</h4>
+                    <p>Our adventure architects build a bespoke itinerary mapped to your goals.</p>
+                </div>
+                <div class="process-step">
+                    <h4>Execution</h4>
+                    <p>Elite instructors guide your team through high-impact adventure scenarios.</p>
+                </div>
+                <div class="process-step">
+                    <h4>Insights</h4>
+                    <p>Post-event analytics and media delivery to reinforce learning outcomes.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -158,12 +246,13 @@
             <div class="footer-grid">
                 
                 <div class="footer-brand">
-                    <a href="index.html" class="nav-brand" style="margin-bottom: 1.5rem; display: block; color: var(--secondary);">Elevate<span style="color: var(--accent)">.</span></a>
+                    <a href="index.html" class="nav-brand" style="margin-bottom: 1.5rem; display: block; color: var(--secondary);"><i class="fa-solid fa-mountain" style="color: var(--secondary); margin-right: 0.5rem;"></i>Elevate</a>
                     <p style="color: rgba(245, 242, 232, 0.7); max-width: 300px; margin-bottom: 1.5rem;">Luxury adventure-based team building for the world's leading organizations.</p>
                     <div class="socials">
                         <a href="#"><i class="fa-brands fa-linkedin"></i></a>
                         <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
                     </div>
                 </div>
 
@@ -190,9 +279,9 @@
                 <div class="footer-contact">
                     <h4>Contact</h4>
                     <ul>
-                        <li><i class="fa-solid fa-location-dot" style="color: var(--secondary); margin-right: 0.5rem; width: 16px;"></i> 100 Adventure Way, Suite 400<br>Denver, CO 80202</li>
-                        <li><i class="fa-solid fa-phone" style="color: var(--secondary); margin-right: 0.5rem; width: 16px;"></i> +1 (800) 555-TEAM</li>
-                        <li><i class="fa-solid fa-envelope" style="color: var(--secondary); margin-right: 0.5rem; width: 16px;"></i> hello@elevate-teams.com</li>
+                        <li><i class="fa-solid fa-location-dot"></i> 100 Adventure Way, Suite 400<br>Denver, CO 80202</li>
+                        <li><i class="fa-solid fa-phone"></i> +1 (800) 555-TEAM</li>
+                        <li><i class="fa-solid fa-envelope"></i> hello@elevate-teams.com</li>
                     </ul>
                 </div>
 

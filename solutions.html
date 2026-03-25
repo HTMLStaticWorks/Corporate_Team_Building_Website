@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Corporate Solutions - Elevate</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><path fill='%23C9A44C' d='M256 32L0 480h512L256 32z'/></svg>">
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
@@ -17,10 +19,16 @@
     <!-- ======== NAVBAR ======== -->
     <header class="navbar">
         <div class="container">
-            <a href="index.html" class="nav-brand">Elevate<span style="color: var(--secondary)">.</span></a>
+            <a href="index.html" class="nav-brand"><i class="fa-solid fa-mountain" style="color: var(--secondary); margin-right: 0.5rem;"></i>Elevate</a>
             
             <nav class="nav-links">
-                <a href="index.html">Home</a>
+                <div class="nav-dropdown">
+                    <a href="#" class="dropdown-toggle">Home <i class="fa-solid fa-chevron-down" style="font-size: 0.75rem; margin-left: 0.25rem;"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="index.html">Home 1 (Corporate)</a>
+                        <a href="index-2.html">Home 2 (Adventure)</a>
+                    </div>
+                </div>
                 <a href="activities.html">Activities</a>
                 <a href="solutions.html" style="color: var(--primary)">Corporate Solutions</a>
                 <a href="pricing.html">Pricing</a>
@@ -89,20 +97,17 @@
             </div>
             
             <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
-                <div class="feature-card" style="box-shadow: none; border: 1px solid var(--border-color);">
-                    <div class="icon" style="background: var(--bg-color); color: var(--primary);"><i class="fa-solid fa-file-contract"></i></div>
-                    <h3>Digital Waivers</h3>
-                    <p>Automated, legally-compliant digital waiver signing directly through your admin dashboard prior to any event.</p>
+                <div class="feature-card" style="background-image: linear-gradient(rgba(15, 42, 29, 0.8), rgba(15, 42, 29, 0.8)), url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=800&auto=format&fit=crop'); background-size: cover; background-position: center; color: white; border: none; min-height: 350px; display: flex; flex-direction: column; justify-content: center; text-align: center; padding: 3rem 2rem;">
+                    <h3 style="color: var(--secondary); margin-bottom: 1rem;">Digital Waivers</h3>
+                    <p style="color: white; margin-bottom: 0;">Automated, legally-compliant digital waiver signing directly through your admin dashboard prior to any event.</p>
                 </div>
-                <div class="feature-card" style="box-shadow: none; border: 1px solid var(--border-color);">
-                    <div class="icon" style="background: var(--bg-color); color: var(--primary);"><i class="fa-solid fa-certificate"></i></div>
-                    <h3>Certified Instructors</h3>
-                    <p>Every guide holds WFR (Wilderness First Responder) and specific discipline certifications.</p>
+                <div class="feature-card" style="background-image: linear-gradient(rgba(15, 42, 29, 0.8), rgba(15, 42, 29, 0.8)), url('https://images.unsplash.com/photo-1522163182402-834f871fd851?q=80&w=800&auto=format&fit=crop'); background-size: cover; background-position: center; color: white; border: none; min-height: 350px; display: flex; flex-direction: column; justify-content: center; text-align: center; padding: 3rem 2rem;">
+                    <h3 style="color: var(--secondary); margin-bottom: 1rem;">Certified Instructors</h3>
+                    <p style="color: white; margin-bottom: 0;">Every guide holds WFR (Wilderness First Responder) and specific discipline certifications.</p>
                 </div>
-                <div class="feature-card" style="box-shadow: none; border: 1px solid var(--border-color);">
-                    <div class="icon" style="background: var(--bg-color); color: var(--primary);"><i class="fa-solid fa-umbrella"></i></div>
-                    <h3>Full Coverage Insurance</h3>
-                    <p>Comprehensive corporate liability insurance provided for every single participant and activity.</p>
+                <div class="feature-card" style="background-image: linear-gradient(rgba(15, 42, 29, 0.8), rgba(15, 42, 29, 0.8)), url('https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=800&auto=format&fit=crop'); background-size: cover; background-position: center; color: white; border: none; min-height: 350px; display: flex; flex-direction: column; justify-content: center; text-align: center; padding: 3rem 2rem;">
+                    <h3 style="color: var(--secondary); margin-bottom: 1rem;">Full Coverage Insurance</h3>
+                    <p style="color: white; margin-bottom: 0;">Comprehensive corporate liability insurance provided for every single participant and activity.</p>
                 </div>
             </div>
         </div>
@@ -150,12 +155,13 @@
             <div class="footer-grid">
                 
                 <div class="footer-brand">
-                    <a href="index.html" class="nav-brand" style="margin-bottom: 1.5rem; display: block; color: var(--secondary);">Elevate<span style="color: var(--accent)">.</span></a>
+                    <a href="index.html" class="nav-brand" style="margin-bottom: 1.5rem; display: block; color: var(--secondary);"><i class="fa-solid fa-mountain" style="color: var(--secondary); margin-right: 0.5rem;"></i>Elevate</a>
                     <p style="color: rgba(245, 242, 232, 0.7); max-width: 300px; margin-bottom: 1.5rem;">Luxury adventure-based team building for the world's leading organizations.</p>
                     <div class="socials">
                         <a href="#"><i class="fa-brands fa-linkedin"></i></a>
                         <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
                     </div>
                 </div>
 
@@ -182,9 +188,9 @@
                 <div class="footer-contact">
                     <h4>Contact</h4>
                     <ul>
-                        <li><i class="fa-solid fa-location-dot" style="color: var(--secondary); margin-right: 0.5rem; width: 16px;"></i> 100 Adventure Way, Suite 400<br>Denver, CO 80202</li>
-                        <li><i class="fa-solid fa-phone" style="color: var(--secondary); margin-right: 0.5rem; width: 16px;"></i> +1 (800) 555-TEAM</li>
-                        <li><i class="fa-solid fa-envelope" style="color: var(--secondary); margin-right: 0.5rem; width: 16px;"></i> hello@elevate-teams.com</li>
+                        <li><i class="fa-solid fa-location-dot"></i> 100 Adventure Way, Suite 400<br>Denver, CO 80202</li>
+                        <li><i class="fa-solid fa-phone"></i> +1 (800) 555-TEAM</li>
+                        <li><i class="fa-solid fa-envelope"></i> hello@elevate-teams.com</li>
                     </ul>
                 </div>
 

@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Elevate - Action & Adventure</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><path fill='%23C9A44C' d='M256 32L0 480h512L256 32z'/></svg>">
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
@@ -17,10 +19,16 @@
     <!-- ======== NAVBAR ======== -->
     <header class="navbar">
         <div class="container">
-            <a href="index.html" class="nav-brand">Elevate<span style="color: var(--secondary)">.</span></a>
+            <a href="index.html" class="nav-brand"><i class="fa-solid fa-mountain" style="color: var(--secondary); margin-right: 0.5rem;"></i>Elevate</a>
             
             <nav class="nav-links">
-                <a href="index.html">Home</a>
+                <div class="nav-dropdown">
+                    <a href="#" class="dropdown-toggle">Home <i class="fa-solid fa-chevron-down" style="font-size: 0.75rem; margin-left: 0.25rem;"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="index.html">Home 1 (Corporate)</a>
+                        <a href="index-2.html">Home 2 (Adventure)</a>
+                    </div>
+                </div>
                 <a href="activities.html">Activities</a>
                 <a href="solutions.html">Corporate Solutions</a>
                 <a href="pricing.html">Pricing</a>
@@ -47,10 +55,10 @@
     <!-- ======== HERO SECTION (Home 2 - Adventure Focus) ======== -->
     <section class="hero adventure-hero" style="background-image: url('https://images.unsplash.com/photo-1533692328991-08159ff19fca?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');">
         <div class="container">
-            <div class="hero-content">
+            <div class="hero-content" style="text-align: center; margin: 0 auto; display: flex; flex-direction: column; align-items: center;">
                 <h1>Step Out of the Office. <span style="color: var(--secondary); font-style: italic;">Into the Wild.</span></h1>
-                <p class="hero-subtitle">High-adrenaline, adventure-based team building for companies that want to push their limits and forge unbreakable bonds.</p>
-                <div class="hero-actions">
+                <p class="hero-subtitle" style="margin-left: auto; margin-right: auto; text-align: center;">High-adrenaline, adventure-based team building for companies that want to push their limits and forge unbreakable bonds.</p>
+                <div class="hero-actions" style="justify-content: center; width: 100%;">
                     <a href="activities.html" class="btn btn-secondary">Discover Adventures</a>
                     <a href="gallery.html" class="btn btn-outline" style="border-color: var(--accent); color: var(--accent);">Watch the Action</a>
                 </div>
@@ -73,6 +81,50 @@
                 <div class="stat-item">
                     <h3 style="font-size: 3rem; color: var(--secondary); margin-bottom: 0.5rem;">100%</h3>
                     <p style="font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">Safety Record</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======== WHY ADVENTURE? ======== -->
+    <section class="section">
+        <div class="container">
+            <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+                <div>
+                    <h2 style="margin-bottom: 1.5rem;">Why Adventure Works.</h2>
+                    <p style="font-size: 1.1rem; color: var(--text-light); margin-bottom: 2rem;">True team dynamics aren't revealed in a conference room. They are forged in the wild, where communication is critical and trust is the only safety net.</p>
+                    <ul style="display: flex; flex-direction: column; gap: 1rem;">
+                        <li style="display: flex; gap: 1rem;"><i class="fa-solid fa-check-circle" style="color: var(--secondary); margin-top: 0.25rem;"></i> <strong>Pressure-Tested Leadership:</strong> Real-world scenarios that require immediate, decisive action.</li>
+                        <li style="display: flex; gap: 1rem;"><i class="fa-solid fa-check-circle" style="color: var(--secondary); margin-top: 0.25rem;"></i> <strong>Raw Communication:</strong> Stripping away corporate jargon to achieve clear, essential alignment.</li>
+                        <li style="display: flex; gap: 1rem;"><i class="fa-solid fa-check-circle" style="color: var(--secondary); margin-top: 0.25rem;"></i> <strong>Shared Resilience:</strong> Overcoming physical obstacles to build lasting psychological bonds.</li>
+                    </ul>
+                </div>
+                <div>
+                    <img src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff?q=80&w=1200&auto=format&fit=crop" alt="Team Support" style="border-radius: 12px; box-shadow: var(--shadow-lg);">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======== ELITE INSTRUCTORS ======== -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Led by the World's Best</h2>
+                <p>Our instructors aren't just guides. They are former special operations personnel, professional mountaineers, and rescue experts.</p>
+            </div>
+            <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+                <div class="feature-card" style="background-image: linear-gradient(rgba(15, 42, 29, 0.8), rgba(15, 42, 29, 0.8)), url('https://images.unsplash.com/photo-1522163182402-834f871fd851?q=80&w=800&auto=format&fit=crop'); background-size: cover; background-position: center; color: white; border: none; min-height: 350px; display: flex; flex-direction: column; justify-content: center; text-align: center; padding: 3rem 2rem;">
+                    <h3 style="color: var(--secondary); margin-bottom: 1rem;">Certified Experts</h3>
+                    <p style="color: white; margin-bottom: 0;">Every instructor holds international certifications in mountain safety, water rescue, and wilderness first aid.</p>
+                </div>
+                <div class="feature-card" style="background-image: linear-gradient(rgba(15, 42, 29, 0.8), rgba(15, 42, 29, 0.8)), url('https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=800&auto=format&fit=crop'); background-size: cover; background-position: center; color: white; border: none; min-height: 350px; display: flex; flex-direction: column; justify-content: center; text-align: center; padding: 3rem 2rem;">
+                    <h3 style="color: var(--secondary); margin-bottom: 1rem;">Rigorous Safety</h3>
+                    <p style="color: white; margin-bottom: 0;">We maintain a 1:5 instructor-to-pax ratio for all high-adrenaline events. Your safety is our primary mission.</p>
+                </div>
+                <div class="feature-card" style="background-image: linear-gradient(rgba(15, 42, 29, 0.8), rgba(15, 42, 29, 0.8)), url('https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=800&auto=format&fit=crop'); background-size: cover; background-position: center; color: white; border: none; min-height: 350px; display: flex; flex-direction: column; justify-content: center; text-align: center; padding: 3rem 2rem;">
+                    <h3 style="color: var(--secondary); margin-bottom: 1rem;">Corporate Fluent</h3>
+                    <p style="color: white; margin-bottom: 0;">Our team understands business objectives. We bridge the gap between physical challenge and corporate growth.</p>
                 </div>
             </div>
         </div>
@@ -142,7 +194,39 @@
         </div>
     </section>
 
-    <!-- ======== CTA SECTION ======== -->
+    <!-- ======== TRUSTED BY ======== -->
+    <section style="padding: 3rem 0; border-bottom: 1px solid var(--border-color); background: var(--card-bg);">
+        <div class="container">
+            <p style="text-align: center; font-size: 0.875rem; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; color: var(--text-light); margin-bottom: 2rem;">Trusted by Industry Leaders</p>
+            <div class="logo-cloud">
+                <i class="fa-brands fa-google"></i>
+                <i class="fa-brands fa-microsoft"></i>
+                <i class="fa-brands fa-amazon"></i>
+                <i class="fa-brands fa-apple"></i>
+                <i class="fa-brands fa-meta"></i>
+                <i class="fa-brands fa-airbnb"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======== ADVENTURE GALLERY ======== -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>The Action in Motion</h2>
+                <p>Every adventure is captured by our professional media team. See what your team's transformation looks like.</p>
+            </div>
+            <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
+                <img src="https://images.unsplash.com/photo-1551698618-1dfe5d97d256?q=80&w=800&auto=format&fit=crop" alt="Rope Challenge" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
+                <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=800&auto=format&fit=crop" alt="Rafting" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
+                <img src="https://images.unsplash.com/photo-1517400508447-f8dd518b86db?q=80&w=800&auto=format&fit=crop" alt="Shelter Building" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
+                <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=800&auto=format&fit=crop" alt="Summit" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
+            </div>
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="gallery.html" class="btn btn-outline">View Full Media Gallery</a>
+            </div>
+        </div>
+    </section>
     <section class="section cta-section">
         <div class="container" style="position: relative; z-index: 1;">
             <h2>Think Your Team Is Ready?</h2>
@@ -157,12 +241,13 @@
             <div class="footer-grid">
                 
                 <div class="footer-brand">
-                    <a href="index.html" class="nav-brand" style="margin-bottom: 1.5rem; display: block; color: var(--secondary);">Elevate<span style="color: var(--accent)">.</span></a>
+                    <a href="index.html" class="nav-brand" style="margin-bottom: 1.5rem; display: block; color: var(--secondary);"><i class="fa-solid fa-mountain" style="color: var(--secondary); margin-right: 0.5rem;"></i>Elevate</a>
                     <p style="color: rgba(245, 242, 232, 0.7); max-width: 300px; margin-bottom: 1.5rem;">Luxury adventure-based team building for the world's leading organizations.</p>
                     <div class="socials">
                         <a href="#"><i class="fa-brands fa-linkedin"></i></a>
                         <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
                     </div>
                 </div>
 
@@ -189,9 +274,9 @@
                 <div class="footer-contact">
                     <h4>Contact</h4>
                     <ul>
-                        <li><i class="fa-solid fa-location-dot" style="color: var(--secondary); margin-right: 0.5rem; width: 16px;"></i> 100 Adventure Way, Suite 400<br>Denver, CO 80202</li>
-                        <li><i class="fa-solid fa-phone" style="color: var(--secondary); margin-right: 0.5rem; width: 16px;"></i> +1 (800) 555-TEAM</li>
-                        <li><i class="fa-solid fa-envelope" style="color: var(--secondary); margin-right: 0.5rem; width: 16px;"></i> hello@elevate-teams.com</li>
+                        <li><i class="fa-solid fa-location-dot"></i> 100 Adventure Way, Suite 400<br>Denver, CO 80202</li>
+                        <li><i class="fa-solid fa-phone"></i> +1 (800) 555-TEAM</li>
+                        <li><i class="fa-solid fa-envelope"></i> hello@elevate-teams.com</li>
                     </ul>
                 </div>
 

@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - Elevate</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><path fill='%23C9A44C' d='M256 32L0 480h512L256 32z'/></svg>">
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- CSS -->
@@ -16,10 +18,16 @@
     <!-- ======== NAVBAR ======== -->
     <header class="navbar">
         <div class="container">
-            <a href="index.html" class="nav-brand">Elevate<span style="color: var(--secondary)">.</span></a>
+            <a href="index.html" class="nav-brand"><i class="fa-solid fa-mountain" style="color: var(--secondary); margin-right: 0.5rem;"></i>Elevate</a>
             
             <nav class="nav-links">
-                <a href="index.html">Home</a>
+                <div class="nav-dropdown">
+                    <a href="#" class="dropdown-toggle">Home <i class="fa-solid fa-chevron-down" style="font-size: 0.75rem; margin-left: 0.25rem;"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="index.html">Home 1 (Corporate)</a>
+                        <a href="index-2.html">Home 2 (Adventure)</a>
+                    </div>
+                </div>
                 <a href="activities.html">Activities</a>
                 <a href="solutions.html">Corporate Solutions</a>
                 <a href="pricing.html">Pricing</a>
@@ -110,11 +118,173 @@
         </div>
     </section>
 
+    <!-- ======== CORE VALUES ======== -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our North Star</h2>
+                <p>The principles that guide every decision and every adventure we run.</p>
+            </div>
+            <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+                <div class="feature-card" style="background-image: linear-gradient(rgba(15, 42, 29, 0.8), rgba(15, 42, 29, 0.8)), url('https://images.unsplash.com/photo-1522163182402-834f871fd851?q=80&w=800&auto=format&fit=crop'); background-size: cover; background-position: center; color: white; border: none; min-height: 350px; display: flex; flex-direction: column; justify-content: center; text-align: center; padding: 3rem 2rem;">
+                    <h3 style="color: var(--secondary); margin-bottom: 1rem;">Uncompromising Safety</h3>
+                    <p style="color: white; margin-bottom: 0;">We believe that radical growth requires a foundation of total trust. Our safety protocols are the most rigorous in the industry.</p>
+                </div>
+                <div class="feature-card" style="background-image: linear-gradient(rgba(15, 42, 29, 0.8), rgba(15, 42, 29, 0.8)), url('https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?q=80&w=800&auto=format&fit=crop'); background-size: cover; background-position: center; color: white; border: none; min-height: 350px; display: flex; flex-direction: column; justify-content: center; text-align: center; padding: 3rem 2rem;">
+                    <h3 style="color: var(--secondary); margin-bottom: 1rem;">Purposeful Discomfort</h3>
+                    <p style="color: white; margin-bottom: 0;">Great things never came from comfort zones. We strategically use environmental pressure to reveal and refine team dynamics.</p>
+                </div>
+                <div class="feature-card" style="background-image: linear-gradient(rgba(15, 42, 29, 0.8), rgba(15, 42, 29, 0.8)), url('https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=800&auto=format&fit=crop'); background-size: cover; background-position: center; color: white; border: none; min-height: 350px; display: flex; flex-direction: column; justify-content: center; text-align: center; padding: 3rem 2rem;">
+                    <h3 style="color: var(--secondary); margin-bottom: 1rem;">Bespoke Excellence</h3>
+                    <p style="color: white; margin-bottom: 0;">Every organization is unique. We don't do 'templated' adventure. We design specific solutions for your specific culture.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======== OUR JOURNEY (Timeline) ======== -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Journey</h2>
+                <p>From a single mountain peak to a global corporate standard.</p>
+            </div>
+            <div style="max-width: 1000px; margin: 0 auto; position: relative; padding: 2rem 0;">
+                <!-- Timeline Line -->
+                <div style="position: absolute; left: 50%; top: 0; bottom: 0; width: 2px; background: var(--border-color); transform: translateX(-50%);"></div>
+                
+                <!-- Timeline Item 1 -->
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4rem; width: 100%;">
+                    <div style="width: 45%; text-align: right; padding-right: 2rem;">
+                        <span style="display: inline-block; padding: 0.25rem 1rem; background: var(--secondary); color: white; border-radius: 50px; font-weight: 600; font-size: 0.85rem; margin-bottom: 1rem;">2015</span>
+                        <h4>The Summit Pitch</h4>
+                        <p style="color: var(--text-light); font-size: 0.9rem;">Founded in a basecamp tent, Elevate launches its first pilot program for a Silicon Valley tech giant.</p>
+                    </div>
+                    <div style="width: 20px; height: 20px; border-radius: 50%; background: var(--secondary); z-index: 1; border: 4px solid var(--bg-color);"></div>
+                    <div style="width: 45%;"></div>
+                </div>
+
+                <!-- Timeline Item 2 -->
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 4rem; width: 100%;">
+                    <div style="width: 45%;"></div>
+                    <div style="width: 20px; height: 20px; border-radius: 50%; background: var(--secondary); z-index: 1; border: 4px solid var(--bg-color);"></div>
+                    <div style="width: 45%; text-align: left; padding-left: 2rem;">
+                        <span style="display: inline-block; padding: 0.25rem 1rem; background: var(--secondary); color: white; border-radius: 50px; font-weight: 600; font-size: 0.85rem; margin-bottom: 1rem;">2018</span>
+                        <h4>50th Partner Milestone</h4>
+                        <p style="color: var(--text-light); font-size: 0.9rem;">Elevate scales to provide retreats for half of the Fortune 100 companies, setting a new standard for ROI.</p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 3 -->
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0; width: 100%;">
+                    <div style="width: 45%; text-align: right; padding-right: 2rem;">
+                        <span style="display: inline-block; padding: 0.25rem 1rem; background: var(--secondary); color: white; border-radius: 50px; font-weight: 600; font-size: 0.85rem; margin-bottom: 1rem;">2026</span>
+                        <h4>The Digital Leap</h4>
+                        <p style="color: var(--text-light); font-size: 0.9rem;">Launch of our end-to-end digital dashboard, allowing real-time participant management and analytics.</p>
+                    </div>
+                    <div style="width: 20px; height: 20px; border-radius: 50%; background: var(--secondary); z-index: 1; border: 4px solid var(--bg-color);"></div>
+                    <div style="width: 45%;"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======== GLOBAL REACH ======== -->
+    <section class="section">
+        <div class="container">
+            <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+                <div>
+                    <h2 style="margin-bottom: 1.5rem;">Global Perspective. <br><span style="color: var(--secondary); font-style: italic;">Local Expertise.</span></h2>
+                    <p style="color: var(--text-light); font-size: 1.125rem; margin-bottom: 2rem;">While our headquarters are in Denver, our reach spans six continents. We maintain elite instructor hubs in the Alps, the Andes, and the Pacific Rim, allowing us to deploy world-class team building anywhere your business operates.</p>
+                    <div style="display: flex; flex-wrap: wrap; gap: 2rem;">
+                        <div style="text-align: center;">
+                            <h3 style="color: var(--primary); margin-bottom: 0.25rem;">12</h3>
+                            <p style="font-size: 0.75rem; text-transform: uppercase; font-weight: 600; letter-spacing: 1px;">Base Camps</p>
+                        </div>
+                        <div style="text-align: center;">
+                            <h2 style="color: var(--primary); font-size: 2.5rem; line-height: 1;">30+</h2>
+                            <p style="font-size: 0.75rem; text-transform: uppercase; font-weight: 600; letter-spacing: 1px;">Countries</p>
+                        </div>
+                        <div style="text-align: center;">
+                            <h2 style="color: var(--primary); font-size: 2.5rem; line-height: 1;">6</h2>
+                            <p style="font-size: 0.75rem; text-transform: uppercase; font-weight: 600; letter-spacing: 1px;">Continents</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <!-- Reusing a luxury image -->
+                    <img src="https://images.unsplash.com/photo-1544216717-3bbf52512659?q=80&w=1200&auto=format&fit=crop" alt="Global Operations" style="border-radius: 12px; box-shadow: var(--shadow-lg);">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======== JOIN US CTA ======== -->
+    <section class="section bg-dark" style="background-color: var(--primary); color: white; padding: 5rem 0; text-align: center;">
+        <div class="container">
+            <h2>Ready to Transform Your Team?</h2>
+            <p style="margin-bottom: 3rem; color: rgba(245, 242, 232, 0.8);">Join the hundreds of industry leaders trust Elevate to build their next high-performing squad.</p>
+            <div style="display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap;">
+                <a href="contact.html" class="btn btn-secondary" style="padding: 1rem 3rem;">Start Your Journey</a>
+                <a href="login.html" class="btn btn-outline" style="border-color: white; color: white; padding: 1rem 3rem;">Access Dashboard</a>
+            </div>
+        </div>
+    </section>
+
     <!-- ======== FOOTER ======== -->
     <footer class="footer">
         <div class="container">
+            <div class="footer-grid">
+                
+                <div class="footer-brand">
+                    <a href="index.html" class="nav-brand" style="margin-bottom: 1.5rem; display: block; color: var(--secondary);"><i class="fa-solid fa-mountain" style="color: var(--secondary); margin-right: 0.5rem;"></i>Elevate</a>
+                    <p style="color: rgba(245, 242, 232, 0.7); max-width: 300px; margin-bottom: 1.5rem;">Luxury adventure-based team building for the world's leading organizations.</p>
+                    <div class="socials">
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Platform</h4>
+                    <ul>
+                        <li><a href="activities.html">Activities & Services</a></li>
+                        <li><a href="solutions.html">Corporate Solutions</a></li>
+                        <li><a href="pricing.html">Pricing & Packages</a></li>
+                        <li><a href="login.html">Client Dashboard</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="gallery.html">Event Gallery</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="coming-soon.html">Careers</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><i class="fa-solid fa-location-dot"></i> 100 Adventure Way, Suite 400<br>Denver, CO 80202</li>
+                        <li><i class="fa-solid fa-phone"></i> +1 (800) 555-TEAM</li>
+                        <li><i class="fa-solid fa-envelope"></i> hello@elevate-teams.com</li>
+                    </ul>
+                </div>
+
+            </div>
+            
             <div class="footer-bottom">
-                <p>&copy; 2026 Elevate Corporate Team Building.</p>
+                <p>&copy; 2026 Elevate Corporate Team Building. All rights reserved.</p>
+                <div class="legal-links">
+                    <a href="404.html">Privacy Policy</a>
+                    <a href="404.html">Terms of Service</a>
+                    <a href="404.html">Safety Documentation</a>
+                </div>
             </div>
         </div>
     </footer>

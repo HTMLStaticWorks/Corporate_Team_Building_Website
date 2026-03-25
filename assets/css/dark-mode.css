@@ -65,3 +65,26 @@ body.dark-mode .btn-outline:hover {
 body.dark-mode .footer {
     background-color: #07150e; /* Even deeper green for dark mode footers */
 }
+
+body.dark-mode .testimonial-card,
+body.dark-mode .process-step {
+    background-color: var(--card-bg);
+    border-color: var(--border-color);
+}
+
+body.dark-mode .testimonial-text {
+    color: var(--text-color);
+}
+
+body.dark-mode .testimonial-card::after {
+    color: rgba(201, 164, 76, 0.2);
+}
+
+body.dark-mode .author-info h5 {
+    color: var(--secondary);
+}
+
+body.dark-mode .logo-cloud i {
+    color: var(--secondary);
+    opacity: 0.8;
+}

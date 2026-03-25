@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Activities - Elevate</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><path fill='%23C9A44C' d='M256 32L0 480h512L256 32z'/></svg>">
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
@@ -17,10 +19,16 @@
     <!-- ======== NAVBAR ======== -->
     <header class="navbar">
         <div class="container">
-            <a href="index.html" class="nav-brand">Elevate<span style="color: var(--secondary)">.</span></a>
+            <a href="index.html" class="nav-brand"><i class="fa-solid fa-mountain" style="color: var(--secondary); margin-right: 0.5rem;"></i>Elevate</a>
             
             <nav class="nav-links">
-                <a href="index.html">Home</a>
+                <div class="nav-dropdown">
+                    <a href="#" class="dropdown-toggle">Home <i class="fa-solid fa-chevron-down" style="font-size: 0.75rem; margin-left: 0.25rem;"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="index.html">Home 1 (Corporate)</a>
+                        <a href="index-2.html">Home 2 (Adventure)</a>
+                    </div>
+                </div>
                 <a href="activities.html" style="color: var(--primary)">Activities</a>
                 <a href="solutions.html">Corporate Solutions</a>
                 <a href="pricing.html">Pricing</a>
@@ -171,6 +179,113 @@
                     </div>
                 </div>
 
+                <!-- NEW ACTIVITY 1 -->
+                <div class="activity-card">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1505235687559-28b5f54645b7?q=80&w=1200&auto=format&fit=crop" alt="Team Sailing">
+                    </div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span><i class="fa-regular fa-clock" style="color: var(--primary);"></i> 6 Hours</span>
+                            <span><i class="fa-solid fa-anchor" style="color: var(--primary);"></i> Professional</span>
+                        </div>
+                        <h3 style="margin-bottom: 0.5rem; font-size: 1.5rem;">Project: Sea Survival</h3>
+                        <p style="color: var(--text-light); margin-bottom: 1.5rem; flex-grow: 1;">A high-stakes sailing expedition where every crew member's role is critical to navigating open waters and sudden squalls.</p>
+                        <hr>
+                        <a href="login.html" class="btn btn-outline" style="width: 100%;">Book This Activity</a>
+                    </div>
+                </div>
+
+                <!-- NEW ACTIVITY 2 -->
+                <div class="activity-card">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff?q=80&w=1200&auto=format&fit=crop" alt="High Ropes">
+                    </div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span><i class="fa-regular fa-clock" style="color: var(--primary);"></i> 4 Hours</span>
+                            <span><i class="fa-solid fa-arrows-up-to-line" style="color: var(--primary);"></i> Trust Focus</span>
+                        </div>
+                        <h3 style="margin-bottom: 0.5rem; font-size: 1.5rem;">Canopy Trust Circuit</h3>
+                        <p style="color: var(--text-light); margin-bottom: 1.5rem; flex-grow: 1;">An aerial high-ropes course designed to break through fear and build unbreakable trust between colleagues on the ground and in the air.</p>
+                        <hr>
+                        <a href="login.html" class="btn btn-outline" style="width: 100%;">Book This Activity</a>
+                    </div>
+                </div>
+
+                <!-- NEW ACTIVITY 3 -->
+                <div class="activity-card">
+                    <div class="card-img">
+                        <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=1200&auto=format&fit=crop" alt="Strategy Paintball">
+                    </div>
+                    <div class="card-content">
+                        <div class="meta">
+                            <span><i class="fa-regular fa-clock" style="color: var(--primary);"></i> 3 Hours</span>
+                            <span><i class="fa-solid fa-gun" style="color: var(--primary);"></i> Strategic</span>
+                        </div>
+                        <h3 style="margin-bottom: 0.5rem; font-size: 1.5rem;">Tactical Extraction</h3>
+                        <p style="color: var(--text-light); margin-bottom: 1.5rem; flex-grow: 1;">A special-ops style simulation using non-impact paintball. Requires intense coordination, flanking, and silent communication.</p>
+                        <hr>
+                        <a href="login.html" class="btn btn-outline" style="width: 100%;">Book This Activity</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ======== CORE BENEFITS ======== -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>The ROI of Adventure</h2>
+                <p>Our activities are more than just games—they are designed by corporate psychologists and elite trainers to deliver measurable results.</p>
+            </div>
+            <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+                <div class="feature-card" style="background-image: linear-gradient(rgba(15, 42, 29, 0.8), rgba(15, 42, 29, 0.8)), url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=800&auto=format&fit=crop'); background-size: cover; background-position: center; color: white; border: none; min-height: 350px; display: flex; flex-direction: column; justify-content: center; text-align: center; padding: 3rem 2rem;">
+                    <h3 style="color: var(--secondary); margin-bottom: 1rem;">Breaking Silos</h3>
+                    <p style="color: white; margin-bottom: 0;">Cross-functional activities that force different departments to speak the same 'adventure' language to succeed.</p>
+                </div>
+                <div class="feature-card" style="background-image: linear-gradient(rgba(15, 42, 29, 0.8), rgba(15, 42, 29, 0.8)), url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=800&auto=format&fit=crop'); background-size: cover; background-position: center; color: white; border: none; min-height: 350px; display: flex; flex-direction: column; justify-content: center; text-align: center; padding: 3rem 2rem;">
+                    <h3 style="color: var(--secondary); margin-bottom: 1rem;">Mental Agility</h3>
+                    <p style="color: white; margin-bottom: 0;">Navigating unknown environments improves rapid decision-making and creative problem-solving under stress.</p>
+                </div>
+                <div class="feature-card" style="background-image: linear-gradient(rgba(15, 42, 29, 0.8), rgba(15, 42, 29, 0.8)), url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=800&auto=format&fit=crop'); background-size: cover; background-position: center; color: white; border: none; min-height: 350px; display: flex; flex-direction: column; justify-content: center; text-align: center; padding: 3rem 2rem;">
+                    <h3 style="color: var(--secondary); margin-bottom: 1rem;">Energy Renewal</h3>
+                    <p style="color: white; margin-bottom: 0;">Step away from the screen and return to the office with heightened focus and a unified team mission.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======== PREPARATION & SAFETY FAQ ======== -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Adventure Readiness</h2>
+                <p>Common questions from HR directors and team leads regarding our high-impact programs.</p>
+            </div>
+            <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 4rem;">
+                <div>
+                    <div style="margin-bottom: 2rem;">
+                        <h4 style="color: var(--primary); margin-bottom: 0.5rem;"><i class="fa-solid fa-circle-question" style="color: var(--secondary); margin-right: 0.5rem;"></i> Do we need prior experience?</h4>
+                        <p style="color: var(--text-light);">No. While some activities are "Advanced," our instructors provide full training and safety briefings. We tailor the intensity to your team's comfort level.</p>
+                    </div>
+                    <div style="margin-bottom: 2rem;">
+                        <h4 style="color: var(--primary); margin-bottom: 0.5rem;"><i class="fa-solid fa-circle-question" style="color: var(--secondary); margin-right: 0.5rem;"></i> What should we wear?</h4>
+                        <p style="color: var(--text-light);">We provide a detailed gear list for every activity. Generally, athletic wear and sturdy footwear are required. We provide all technical gear (harnesses, helmets, etc.).</p>
+                    </div>
+                </div>
+                <div>
+                    <div style="margin-bottom: 2rem;">
+                        <h4 style="color: var(--primary); margin-bottom: 0.5rem;"><i class="fa-solid fa-circle-question" style="color: var(--secondary); margin-right: 0.5rem;"></i> Is it safe for all ages/abilities?</h4>
+                        <p style="color: var(--text-light);">Safety is our #1 priority. We have a 100% safety record. Many activities have "low-impact" modifications to ensure every team member can participate meaningfully.</p>
+                    </div>
+                    <div style="margin-bottom: 2rem;">
+                        <h4 style="color: var(--primary); margin-bottom: 0.5rem;"><i class="fa-solid fa-circle-question" style="color: var(--secondary); margin-right: 0.5rem;"></i> How do we handle emergencies?</h4>
+                        <p style="color: var(--text-light);">Every instructor is WFR (Wilderness First Responder) certified. We maintain satellite communication and have evacuation protocols for every remote location.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -190,12 +305,13 @@
             <div class="footer-grid">
                 
                 <div class="footer-brand">
-                    <a href="index.html" class="nav-brand" style="margin-bottom: 1.5rem; display: block; color: var(--secondary);">Elevate<span style="color: var(--accent)">.</span></a>
+                    <a href="index.html" class="nav-brand" style="margin-bottom: 1.5rem; display: block; color: var(--secondary);"><i class="fa-solid fa-mountain" style="color: var(--secondary); margin-right: 0.5rem;"></i>Elevate</a>
                     <p style="color: rgba(245, 242, 232, 0.7); max-width: 300px; margin-bottom: 1.5rem;">Luxury adventure-based team building for the world's leading organizations.</p>
                     <div class="socials">
                         <a href="#"><i class="fa-brands fa-linkedin"></i></a>
                         <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
                     </div>
                 </div>
 
@@ -222,9 +338,9 @@
                 <div class="footer-contact">
                     <h4>Contact</h4>
                     <ul>
-                        <li><i class="fa-solid fa-location-dot" style="color: var(--secondary); margin-right: 0.5rem; width: 16px;"></i> 100 Adventure Way, Suite 400<br>Denver, CO 80202</li>
-                        <li><i class="fa-solid fa-phone" style="color: var(--secondary); margin-right: 0.5rem; width: 16px;"></i> +1 (800) 555-TEAM</li>
-                        <li><i class="fa-solid fa-envelope" style="color: var(--secondary); margin-right: 0.5rem; width: 16px;"></i> hello@elevate-teams.com</li>
+                        <li><i class="fa-solid fa-location-dot"></i> 100 Adventure Way, Suite 400<br>Denver, CO 80202</li>
+                        <li><i class="fa-solid fa-phone"></i> +1 (800) 555-TEAM</li>
+                        <li><i class="fa-solid fa-envelope"></i> hello@elevate-teams.com</li>
                     </ul>
                 </div>
 
