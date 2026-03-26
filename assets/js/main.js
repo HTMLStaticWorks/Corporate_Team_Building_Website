@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // ---- Dark Mode Toggle ----
-    const themeToggleBtn = document.getElementById('theme-toggle');
+    const themeToggleBtn = document.getElementById('themeToggle');
     
     // Check local storage for theme preference
     const currentTheme = localStorage.getItem('theme');
@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ---- RTL Toggle ----
-    const rtlToggleBtn = document.getElementById('rtl-toggle');
+    const rtlToggleBtn = document.getElementById('rtlToggle');
     
     // Check local storage for direction preference
     const currentDir = localStorage.getItem('dir');
@@ -71,4 +71,48 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // ---- Active Link Highlighting ----
+    const currentPath = window.location.pathname;
+    const currentPage = currentPath.split("/").pop() || 'index.html';
+    
+    const allNavLinks = document.querySelectorAll('.nav-links a');
+    
+    allNavLinks.forEach(link => {
+        const href = link.getAttribute('href');
+        
+        // Check if the current page matches the link's href
+        if (href === currentPage || (currentPage === 'index.html' && href === '#')) {
+            link.classList.add('active');
+            
+            // If the link is inside a dropdown, highlight the parent toggle too
+            const dropdownMenu = link.closest('.dropdown-menu');
+            if (dropdownMenu) {
+                const dropdownToggle = dropdownMenu.previousElementSibling;
+                if (dropdownToggle && dropdownToggle.classList.contains('dropdown-toggle')) {
+                    dropdownToggle.classList.add('active');
+                }
+            }
+        }
+    });
+
+    // ---- FAQ Accordion Toggle ----
+    const faqQuestions = document.querySelectorAll('.faq-question');
+    
+    faqQuestions.forEach(question => {
+        question.addEventListener('click', () => {
+            const item = question.parentElement;
+            const isActive = item.classList.contains('active');
+            
+            // Close all other items for a clean accordion effect
+            document.querySelectorAll('.faq-item').forEach(otherItem => {
+                otherItem.classList.remove('active');
+            });
+            
+            // Toggle current item
+            if (!isActive) {
+                item.classList.add('active');
+            }
+        });
+    });
 });

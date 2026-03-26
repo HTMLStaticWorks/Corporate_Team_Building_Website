@@ -146,6 +146,35 @@ button, input, textarea, select {
     color: var(--accent);
 }
 
+/* Utility Classes */
+.bg-dark {
+    background-color: var(--primary) !important;
+    color: white !important;
+}
+
+.bg-dark h1, 
+.bg-dark h2, 
+.bg-dark h3, 
+.bg-dark h4, 
+.bg-dark h5, 
+.bg-dark h6 {
+    color: white !important;
+}
+
+.bg-dark p {
+    color: rgba(245, 242, 232, 0.8) !important;
+}
+
+.bg-dark .btn-outline {
+    border-color: white !important;
+    color: white !important;
+}
+
+.bg-dark .btn-outline:hover {
+    background: white !important;
+    color: var(--primary) !important;
+}
+
 /* Header / Navbar */
 .navbar {
     position: fixed;
@@ -169,7 +198,7 @@ button, input, textarea, select {
     font-family: var(--font-heading);
     font-size: 1.5rem;
     font-weight: 700;
-    color: var(--primary);
+    color: var(--secondary);
 }
 
 .nav-links {
@@ -183,8 +212,23 @@ button, input, textarea, select {
     color: var(--text-color);
 }
 
-.nav-links a:hover {
+.nav-links a:hover,
+.nav-links a.active {
     color: var(--secondary);
+}
+
+.nav-links a.active {
+    position: relative;
+}
+
+.nav-links a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--secondary);
 }
 
 /* Navigation Dropdown */
@@ -221,7 +265,8 @@ button, input, textarea, select {
     transition: all 0.2s ease-in-out;
 }
 
-.dropdown-menu a:hover {
+.dropdown-menu a:hover,
+.dropdown-menu a.active {
     background-color: var(--primary) !important;
     color: var(--secondary) !important;
     padding-left: 2rem !important; /* slight inward nudge */
@@ -265,9 +310,11 @@ button, input, textarea, select {
         left: 0;
         width: 100%;
         background-color: var(--bg-color);
-        padding: 1.5rem;
+        padding: 2.5rem 1.5rem;
         box-shadow: var(--shadow-md);
-        gap: 1.5rem;
+        gap: 2rem;
+        align-items: center;
+        text-align: center;
     }
     
     .nav-links.active {
@@ -276,6 +323,9 @@ button, input, textarea, select {
     
     .nav-dropdown {
         width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
     
     .nav-dropdown:hover .dropdown-menu {
@@ -286,18 +336,35 @@ button, input, textarea, select {
         position: static;
         box-shadow: none;
         background: transparent;
-        padding-left: 1rem;
-        padding-top: 1rem;
-        padding-bottom: 0;
+        padding: 1rem 0 0 0;
+        width: 100%;
+        display: none;
+        align-items: center;
     }
     
-    .nav-links.active {
-        right: 0;
+    .nav-dropdown.active .dropdown-menu {
+        display: flex;
+    }
+
+    .nav-links a.active::after {
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -2px;
+    }
+    
+    .nav-controls {
+        gap: 0.75rem;
+    }
+
+    .nav-controls .btn-sm {
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
     }
     
     .hamburger {
         display: block;
         z-index: 1001;
+        margin-left: 0.5rem;
     }
 }
 
@@ -567,8 +634,19 @@ button, input, textarea, select {
 
 .socials {
     display: flex;
-    gap: 1rem;
+    gap: 1.25rem;
     font-size: 1.25rem;
+}
+
+.socials a {
+    color: var(--accent);
+    transition: all var(--transition-fast);
+    display: inline-block;
+}
+
+.socials a:hover {
+    color: var(--secondary) !important;
+    transform: translateY(-3px);
 }
 
 .footer-bottom {
@@ -712,6 +790,8 @@ button, input, textarea, select {
     box-shadow: var(--shadow-md);
     position: relative;
     border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
 }
 
 .testimonial-card::after {
@@ -731,6 +811,7 @@ button, input, textarea, select {
     line-height: 1.8;
     color: var(--text-color);
     font-size: 1.1rem;
+    flex-grow: 1;
 }
 
 .testimonial-author {
@@ -759,3 +840,151 @@ button, input, textarea, select {
     font-weight: 600;
     margin: 0;
 }
+
+/* Adventure Featured Cards (Home 2) */
+.adventure-card {
+    background: var(--card-bg);
+    padding: 3rem 2rem;
+    border-radius: 16px;
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-normal);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid var(--border-color);
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    min-height: 380px;
+}
+
+.adventure-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(15, 42, 29, 0.75), rgba(15, 42, 29, 0.9));
+    z-index: 1;
+    transition: background var(--transition-normal);
+}
+
+.adventure-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--secondary);
+}
+
+.adventure-card:hover::before {
+    background: linear-gradient(rgba(15, 42, 29, 0.65), rgba(15, 42, 29, 0.85));
+}
+
+.adventure-card > * {
+    position: relative;
+    z-index: 2;
+}
+
+.adventure-card h4 {
+    color: var(--secondary);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.adventure-card p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1rem;
+    margin-bottom: 0;
+    line-height: 1.6;
+}
+
+/* FAQ Accordion */
+.faq-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.faq-item {
+    background: var(--card-bg);
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    transition: all var(--transition-normal);
+    overflow: hidden;
+}
+
+.faq-item:hover {
+    border-color: var(--secondary);
+    box-shadow: var(--shadow-sm);
+}
+
+.faq-item.active {
+    border-color: var(--secondary);
+    box-shadow: var(--shadow-md);
+}
+
+.faq-question {
+    width: 100%;
+    padding: 1.75rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    color: var(--primary);
+    font-family: var(--font-heading);
+    font-size: 1.125rem;
+    font-weight: 700;
+    transition: color var(--transition-fast);
+}
+
+.faq-item.active .faq-question {
+    color: var(--secondary);
+}
+
+.faq-question i {
+    font-size: 1rem;
+    transition: transform var(--transition-normal);
+    color: var(--secondary);
+}
+
+.faq-item.active .faq-question i {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), padding 0.4s ease;
+    padding: 0 2rem;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 500px; /* Large enough for most answers */
+    padding-bottom: 2rem;
+}
+
+.faq-answer p {
+    color: var(--text-light);
+    margin: 0;
+    line-height: 1.7;
+}
+ 
+ /* Timeline Styles */
+ .year-badge {
+     display: inline-block;
+     padding: 0.25rem 1rem;
+     background: var(--secondary);
+     color: white;
+     border-radius: 50px;
+     font-weight: 600;
+     font-size: 0.85rem;
+     margin-bottom: 1rem;
+     transition: all var(--transition-normal);
+ }

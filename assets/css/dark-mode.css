@@ -88,3 +88,8 @@ body.dark-mode .logo-cloud i {
     color: var(--secondary);
     opacity: 0.8;
 }
+ 
+ body.dark-mode .year-badge {
+     background-color: var(--secondary);
+     color: #0F2A1D; /* Dark green for contrast on cream badge */
+ }
