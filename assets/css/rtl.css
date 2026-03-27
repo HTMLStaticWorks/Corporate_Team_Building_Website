@@ -14,14 +14,14 @@ html[dir="rtl"] .nav-links {
     margin-left: 0;
 }
 
-html[dir="rtl"] @media (max-width: 991px) {
-    .nav-links {
+@media (max-width: 991px) {
+    html[dir="rtl"] .nav-links {
         right: auto;
         left: -100%;
         transition: left var(--transition-normal);
     }
-    
-    .nav-links.active {
+
+    html[dir="rtl"] .nav-links.active {
         left: 0;
     }
 }
@@ -49,4 +49,10 @@ html[dir="rtl"] .icon-arrow-right {
 
 html[dir="rtl"] .icon-arrow-left {
     transform: scaleX(-1);
+}
+
+/* Scroll to top button position for RTL */
+html[dir="rtl"] #scroll-to-top {
+    right: auto;
+    left: 2rem;
 }

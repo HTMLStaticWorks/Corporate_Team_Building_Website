@@ -20,8 +20,9 @@ body.dark-mode h6 {
     color: var(--secondary);
 }
 
-body.dark-mode .nav-brand {
-    color: var(--secondary);
+body.dark-mode .nav-brand,
+body.dark-mode .nav-brand i {
+    color: var(--primary) !important;
 }
 
 body.dark-mode .navbar {
@@ -93,3 +94,13 @@ body.dark-mode .logo-cloud i {
      background-color: var(--secondary);
      color: #0F2A1D; /* Dark green for contrast on cream badge */
  }
+
+body.dark-mode #scroll-to-top {
+    background: linear-gradient(135deg, var(--primary), #a87a20);
+    color: #0F2A1D;
+    box-shadow: 0 4px 15px rgba(201, 164, 76, 0.3);
+}
+
+body.dark-mode #scroll-to-top:hover {
+    box-shadow: 0 6px 24px rgba(201, 164, 76, 0.5);
+}
