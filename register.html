@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Elevate</title>
+    <title>Sign Up - Elevate</title>
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><path fill='%23C9A44C' d='M256 32c12.5 0 24.1 6.4 30.8 17L503.4 394.4c5.6 8.9 8.6 19.2 8.6 29.7c0 30.9-25 55.9-55.9 55.9L55.9 480C25 480 0 455 0 424.1c0-10.5 3-20.8 8.6-29.7L225.2 49c6.6-10.6 18.3-17 30.8-17zm65 192L256 120.4 176.9 246.5l18.3 24.4c6.4 8.5 19.2 8.5 25.6 0l25.6-34.1c6-8.1 15.5-12.8 25.6-12.8l49 0z'/></svg>">
     <!-- Icons -->
@@ -15,56 +15,65 @@
 </head>
 <body style="display: flex; align-items: center; justify-content: center; min-height: 100vh; background: linear-gradient(rgba(15, 42, 29, 0.8), rgba(15, 42, 29, 0.8)), url('https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3') center/cover;">
 
-    <div style="background: var(--card-bg); width: 100%; max-width: 450px; border-radius: 12px; box-shadow: var(--shadow-lg); overflow: hidden;">
+    <div style="background: var(--card-bg); width: 100%; max-width: 450px; border-radius: 12px; box-shadow: var(--shadow-lg); overflow: hidden; margin: 2rem 0;">
         
         <!-- Header -->
         <div style="padding: 2rem 2rem 1.5rem; text-align: center; border-bottom: 1px solid var(--border-color);">
             <a href="index.html" class="nav-brand" style="font-size: 2rem; justify-content: center;"><i class="fa-solid fa-mountain" style="color: var(--secondary); margin-right: 0.5rem;"></i>Elevate</a>
-            <p style="color: var(--text-light); margin-top: 0.5rem; margin-bottom: 0;">Corporate Dashboard Login</p>
+            <p style="color: var(--text-light); margin-top: 0.5rem; margin-bottom: 0;">Corporate Account Registration</p>
         </div>
 
         <!-- Form -->
         <div style="padding: 2rem;">
             <form action="dashboard-user.html">
-                <div class="form-group">
+                <div class="form-group" style="margin-bottom: 1rem;">
+                    <label class="form-label">Full Name</label>
+                    <input type="text" class="form-control" required placeholder="John Doe">
+                </div>
+
+                <div class="form-group" style="margin-bottom: 1rem;">
+                    <label class="form-label">Company Name</label>
+                    <input type="text" class="form-control" required placeholder="Acme Corp">
+                </div>
+
+                <div class="form-group" style="margin-bottom: 1rem;">
                     <label class="form-label">Corporate Email Address</label>
                     <input type="email" class="form-control" required placeholder="name@company.com">
                 </div>
                 
-                <div class="form-group">
-                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
-                        <label class="form-label" style="margin-bottom: 0;">Password</label>
-                        <a href="#" style="font-size: 0.85rem; color: var(--secondary);">Forgot Password?</a>
-                    </div>
+                <div class="form-group" style="margin-bottom: 1rem;">
+                    <label class="form-label" style="margin-bottom: 0.5rem; display: block;">Password</label>
                     <input type="password" class="form-control" required placeholder="••••••••">
                 </div>
 
-                <div class="form-group" style="display: flex; align-items: center; gap: 0.5rem;">
-                    <input type="checkbox" id="remember" style="width: 16px; height: 16px;">
-                    <label for="remember" style="font-size: 0.875rem; color: var(--text-light);">Stay logged in for 30 days</label>
+                <div class="form-group" style="margin-bottom: 1.5rem;">
+                    <label class="form-label" style="margin-bottom: 0.5rem; display: block;">Confirm Password</label>
+                    <input type="password" class="form-control" required placeholder="••••••••">
                 </div>
 
-                <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Access Dashboard</button>
-                
+                <div class="form-group" style="display: flex; align-items: flex-start; gap: 0.5rem; margin-bottom: 1.5rem;">
+                    <input type="checkbox" id="terms" required style="width: 16px; height: 16px; margin-top: 0.2rem;">
+                    <label for="terms" style="font-size: 0.875rem; color: var(--text-light); line-height: 1.4;">I agree to the <a href="404.html" style="text-decoration: underline;">Terms of Service</a> and <a href="404.html" style="text-decoration: underline;">Privacy Policy</a></label>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Create Account</button>
+
                 <div style="display: flex; align-items: center; margin: 1.5rem 0;">
                     <hr style="flex: 1; border: 0; border-top: 1px solid var(--border-color);">
-                    <span style="padding: 0 1rem; color: var(--text-light); font-size: 0.85rem;">Or continue with</span>
+                    <span style="padding: 0 1rem; color: var(--text-light); font-size: 0.85rem;">Or sign up with</span>
                     <hr style="flex: 1; border: 0; border-top: 1px solid var(--border-color);">
                 </div>
 
-                <div style="display: flex; gap: 1rem; margin-bottom: 1.5rem;">
+                <div style="display: flex; gap: 1rem; margin-bottom: 0.5rem;">
                     <button type="button" class="btn btn-outline" style="flex: 1; display: flex; justify-content: center; gap: 0.5rem; border-color: var(--border-color); color: var(--text-color);"><i class="fa-brands fa-google" style="color: #DB4437;"></i> Google</button>
                     <button type="button" class="btn btn-outline" style="flex: 1; display: flex; justify-content: center; gap: 0.5rem; border-color: var(--border-color); color: var(--text-color);"><i class="fa-brands fa-linkedin-in" style="color: #0077b5;"></i> LinkedIn</button>
-                </div>
-                <div style="text-align: center; margin-top: 1.5rem;">
-                    <button type="button" onclick="window.location.href='dashboard-admin.html';" class="btn" style="background: transparent; color: var(--text-light); text-decoration: underline; font-size: 0.85rem; padding: 0;">Login as Admin (Demo Demo)</button>
                 </div>
             </form>
         </div>
 
         <!-- Footer -->
         <div style="padding: 1.5rem 2rem; background: rgba(0,0,0,0.02); border-top: 1px solid var(--border-color); text-align: center;">
-            <p style="font-size: 0.875rem; color: var(--text-light); margin: 0;">Don't have a corporate account? <br><a href="register.html" style="font-weight: 600;">Create an account</a></p>
+            <p style="font-size: 0.875rem; color: var(--text-light); margin: 0;">Already have an account? <br><a href="login.html" style="font-weight: 600;">Log in here</a></p>
         </div>
 
     </div>
