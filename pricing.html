@@ -35,12 +35,13 @@
                 <a href="gallery.html">Gallery</a>
                 <a href="about.html">About Us</a>
                 <a href="contact.html">Contact</a>
+                <a href="login.html" class="btn btn-primary mobile-only" style="margin-top: 1rem; width: 100%;">Client Login</a>
             </nav>
             
             <div class="nav-controls">
                 <button id="theme-toggle" aria-label="Toggle Dark Mode"><i class="fa-solid fa-moon"></i></button>
                 <button id="rtl-toggle" aria-label="Toggle RTL"><i class="fa-solid fa-language"></i></button>
-                <a href="login.html" class="btn btn-primary" style="padding: 0.5rem 1.5rem; font-size: 0.875rem;">Client Login</a>
+                <a href="login.html" class="btn btn-primary desktop-only" style="padding: 0.5rem 1.5rem; font-size: 0.875rem;">Client Login</a>
                 <button class="hamburger" aria-label="Toggle navigation"><i class="fa-solid fa-bars"></i></button>
             </div>
         </div>
@@ -59,66 +60,66 @@
     <!-- ======== PRICING TABLES ======== -->
     <section class="section">
         <div class="container">
-            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; align-items: center;">
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; align-items: stretch;">
                 
                 <!-- Basic -->
-                <div style="flex: 0 1 350px; background: var(--card-bg); padding: 3rem; border-radius: 12px; border: 1px solid var(--border-color); box-shadow: var(--shadow-sm); text-align: center;">
-                    <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Start-Up</h3>
+                <div class="pricing-card">
+                    <h3>Start-Up</h3>
                     <p style="color: var(--text-light); margin-bottom: 2rem;">For small dynamic teams</p>
-                    <div style="font-size: 3.5rem; font-weight: 700; color: var(--primary); margin-bottom: 0.5rem; font-family: var(--font-heading);">
+                    <div class="amount">
                         $3,500
                     </div>
-                    <p style="color: var(--text-light); font-size: 0.875rem; margin-bottom: 2rem;">Per event (up to 15 people)</p>
+                    <p class="subtitle">Per event (up to 15 people)</p>
                     
-                    <ul style="text-align: left; margin-bottom: 2.5rem; display: flex; flex-direction: column; gap: 1rem;">
-                        <li><i class="fa-solid fa-check" style="color: var(--secondary); margin-right: 0.5rem;"></i> Half-day adventure activity</li>
-                        <li><i class="fa-solid fa-check" style="color: var(--secondary); margin-right: 0.5rem;"></i> 2 Certified Instructors</li>
-                        <li><i class="fa-solid fa-check" style="color: var(--secondary); margin-right: 0.5rem;"></i> Full Dashboard Access</li>
-                        <li><i class="fa-solid fa-check" style="color: var(--secondary); margin-right: 0.5rem;"></i> Legal Digital Waivers</li>
-                        <li style="color: var(--text-light);"><i class="fa-solid fa-xmark" style="color: #ccc; margin-right: 0.5rem;"></i> Post-event Analytics</li>
-                        <li style="color: var(--text-light);"><i class="fa-solid fa-xmark" style="color: #ccc; margin-right: 0.5rem;"></i> Professional Media Package</li>
+                    <ul class="features-list">
+                        <li><i class="fa-solid fa-check" style="color: var(--secondary);"></i> Half-day adventure activity</li>
+                        <li><i class="fa-solid fa-check" style="color: var(--secondary);"></i> 2 Certified Instructors</li>
+                        <li><i class="fa-solid fa-check" style="color: var(--secondary);"></i> Full Dashboard Access</li>
+                        <li><i class="fa-solid fa-check" style="color: var(--secondary);"></i> Legal Digital Waivers</li>
+                        <li style="color: var(--text-light);"><i class="fa-solid fa-xmark" style="color: #ccc;"></i> Post-event Analytics</li>
+                        <li style="color: var(--text-light);"><i class="fa-solid fa-xmark" style="color: #ccc;"></i> Professional Media Package</li>
                     </ul>
                     <a href="contact.html" class="btn btn-outline" style="width: 100%;">Get Started</a>
                 </div>
 
                 <!-- Premium -->
-                <div style="flex: 0 1 350px; background: var(--primary); padding: 4rem 3rem; border-radius: 12px; box-shadow: var(--shadow-lg); text-align: center; color: var(--accent); position: relative; z-index: 1;">
-                    <span style="position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--secondary); color: var(--primary); padding: 0.25rem 1rem; border-radius: 20px; font-weight: 700; font-size: 0.85rem; text-transform: uppercase;">Most Popular</span>
+                <div class="pricing-card featured">
+                    <span style="position: absolute; top: 15px; left: 50%; transform: translateX(-50%); background: var(--secondary); color: var(--primary); padding: 0.25rem 1rem; border-radius: 20px; font-weight: 700; font-size: 0.85rem; text-transform: uppercase;">Most Popular</span>
                     
-                    <h3 style="color: var(--accent); font-size: 1.5rem; margin-bottom: 0.5rem;">Enterprise</h3>
-                    <p style="color: rgba(245, 242, 232, 0.7); margin-bottom: 2rem;">For growing corporate divisions</p>
-                    <div style="font-size: 3.5rem; font-weight: 700; color: var(--secondary); margin-bottom: 0.5rem; font-family: var(--font-heading);">
+                    <h3>Enterprise</h3>
+                    <p class="subtitle" style="color: rgba(245, 242, 232, 0.7) !important;">For growing corporate divisions</p>
+                    <div class="amount">
                         $8,900
                     </div>
-                    <p style="color: rgba(245, 242, 232, 0.7); font-size: 0.875rem; margin-bottom: 2rem;">Per event (up to 50 people)</p>
+                    <p class="subtitle" style="color: rgba(245, 242, 232, 0.7) !important;">Per event (up to 50 people)</p>
                     
-                    <ul style="text-align: left; margin-bottom: 2.5rem; display: flex; flex-direction: column; gap: 1rem;">
-                        <li><i class="fa-solid fa-check" style="color: var(--secondary); margin-right: 0.5rem;"></i> Full-day immersive adventure</li>
-                        <li><i class="fa-solid fa-check" style="color: var(--secondary); margin-right: 0.5rem;"></i> 5+ Certified Instructors</li>
-                        <li><i class="fa-solid fa-check" style="color: var(--secondary); margin-right: 0.5rem;"></i> Full Dashboard Access</li>
-                        <li><i class="fa-solid fa-check" style="color: var(--secondary); margin-right: 0.5rem;"></i> Catering & Transport Included</li>
-                        <li><i class="fa-solid fa-check" style="color: var(--secondary); margin-right: 0.5rem;"></i> Professional Media Package</li>
-                        <li><i class="fa-solid fa-check" style="color: var(--secondary); margin-right: 0.5rem;"></i> Basic ROI Analytics Report</li>
+                    <ul class="features-list">
+                        <li><i class="fa-solid fa-check"></i> Full-day immersive adventure</li>
+                        <li><i class="fa-solid fa-check"></i> 5+ Certified Instructors</li>
+                        <li><i class="fa-solid fa-check"></i> Full Dashboard Access</li>
+                        <li><i class="fa-solid fa-check"></i> Catering & Transport Included</li>
+                        <li><i class="fa-solid fa-check"></i> Professional Media Package</li>
+                        <li><i class="fa-solid fa-check"></i> Basic ROI Analytics Report</li>
                     </ul>
                     <a href="contact.html" class="btn btn-secondary" style="width: 100%;">Get Started</a>
                 </div>
 
                 <!-- Executive -->
-                <div style="flex: 0 1 350px; background: var(--card-bg); padding: 3rem; border-radius: 12px; border: 1px solid var(--border-color); box-shadow: var(--shadow-sm); text-align: center;">
-                    <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Executive Retreat</h3>
+                <div class="pricing-card">
+                    <h3>Executive Retreat</h3>
                     <p style="color: var(--text-light); margin-bottom: 2rem;">For C-Suite and leadership</p>
-                    <div style="font-size: 3.5rem; font-weight: 700; color: var(--primary); margin-bottom: 0.5rem; font-family: var(--font-heading);">
+                    <div class="amount">
                         Custom
                     </div>
-                    <p style="color: var(--text-light); font-size: 0.875rem; margin-bottom: 2rem;">Multi-day bespoke experience</p>
+                    <p class="subtitle">Multi-day bespoke experience</p>
                     
-                    <ul style="text-align: left; margin-bottom: 2.5rem; display: flex; flex-direction: column; gap: 1rem;">
-                        <li><i class="fa-solid fa-check" style="color: var(--secondary); margin-right: 0.5rem;"></i> Fully tailored 2-5 day retreat</li>
-                        <li><i class="fa-solid fa-check" style="color: var(--secondary); margin-right: 0.5rem;"></i> Private luxury accommodations</li>
-                        <li><i class="fa-solid fa-check" style="color: var(--secondary); margin-right: 0.5rem;"></i> Advanced Leadership Analytics</li>
-                        <li><i class="fa-solid fa-check" style="color: var(--secondary); margin-right: 0.5rem;"></i> Custom Objective Mapping</li>
-                        <li><i class="fa-solid fa-check" style="color: var(--secondary); margin-right: 0.5rem;"></i> Cinematic Media Production</li>
-                        <li><i class="fa-solid fa-check" style="color: var(--secondary); margin-right: 0.5rem;"></i> White-glove concierge support</li>
+                    <ul class="features-list">
+                        <li><i class="fa-solid fa-check" style="color: var(--secondary);"></i> Fully tailored 2-5 day retreat</li>
+                        <li><i class="fa-solid fa-check" style="color: var(--secondary);"></i> Private luxury accommodations</li>
+                        <li><i class="fa-solid fa-check" style="color: var(--secondary);"></i> Advanced Leadership Analytics</li>
+                        <li><i class="fa-solid fa-check" style="color: var(--secondary);"></i> Custom Objective Mapping</li>
+                        <li><i class="fa-solid fa-check" style="color: var(--secondary);"></i> Cinematic Media Production</li>
+                        <li><i class="fa-solid fa-check" style="color: var(--secondary);"></i> White-glove concierge support</li>
                     </ul>
                     <a href="contact.html" class="btn btn-outline" style="width: 100%;">Contact Sales</a>
                 </div>
@@ -241,7 +242,7 @@
                 </div>
 
                 <div class="footer-links">
-                    <h4>Platform</h4>
+                    <h4>Quick Links</h4>
                     <ul>
                         <li><a href="index.html">Home 1 (Corporate)</a></li>
                         <li><a href="index-2.html">Home 2 (Adventure)</a></li>

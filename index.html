@@ -35,6 +35,7 @@
                 <a href="gallery.html">Gallery</a>
                 <a href="about.html">About Us</a>
                 <a href="contact.html">Contact</a>
+                <a href="login.html" class="btn btn-primary mobile-only" style="margin-top: 1rem; width: 100%;">Client Login</a>
             </nav>
             
             <div class="nav-controls">
@@ -44,7 +45,7 @@
                 <button id="rtl-toggle" aria-label="Toggle RTL">
                     <i class="fa-solid fa-language"></i>
                 </button>
-                <a href="login.html" class="btn btn-primary" style="padding: 0.5rem 1.5rem; font-size: 0.875rem;">Client Login</a>
+                <a href="login.html" class="btn btn-primary desktop-only" style="padding: 0.5rem 1.5rem; font-size: 0.875rem;">Client Login</a>
                 <button class="hamburger" aria-label="Toggle navigation">
                     <i class="fa-solid fa-bars"></i>
                 </button>
@@ -178,24 +179,18 @@
                     <p>Hear from the HR directors and CEOs who have transformed their organizations with Elevate.</p>
                 </div>
                 <div class="testimonials-grid">
-                    <div class="testimonial-card">
+                    <div class="testimonial-card" style="display: flex; flex-direction: column;">
                         <p class="testimonial-text">"Elevate didn't just give us a break from the office; they gave us a new way to work together. The ROI on our team's communication has been visible since day one."</p>
-                        <div class="testimonial-author">
-                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=200&auto=format&fit=crop" alt="Sarah Jenkins" class="author-img">
-                            <div class="author-info">
-                                <h5>Sarah Jenkins</h5>
-                                <p>VP of People, TechCorp</p>
-                            </div>
+                        <div class="testimonial-author" style="justify-content: center; align-items: center; gap: 1rem; margin-top: auto;">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=200&auto=format&fit=crop" alt="Sarah Jenkins" class="author-img" style="width: 50px; height: 50px; border-radius: 50%; border: 2px solid var(--secondary); object-fit: cover;">
+                            <p style="margin: 0; font-size: 1rem; font-weight: 700; color: var(--text-color);">Sarah Jenkins <span style="font-weight: 400; color: var(--text-light); font-size: 0.85rem; margin-left: 0.5rem;">| VP of People, TechCorp</span></p>
                         </div>
                     </div>
-                    <div class="testimonial-card">
+                    <div class="testimonial-card" style="display: flex; flex-direction: column;">
                         <p class="testimonial-text">"The survival simulation was the most intense leadership training I've ever experienced. It stripped away titles and forced us to lead through empathy and logic."</p>
-                        <div class="testimonial-author">
-                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop" alt="Marcus Chen" class="author-img">
-                            <div class="author-info">
-                                <h5>Marcus Chen</h5>
-                                <p>CEO, Global Logistics</p>
-                            </div>
+                        <div class="testimonial-author" style="justify-content: center; align-items: center; gap: 1rem; margin-top: auto;">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop" alt="Marcus Chen" class="author-img" style="width: 50px; height: 50px; border-radius: 50%; border: 2px solid var(--secondary); object-fit: cover;">
+                            <p style="margin: 0; font-size: 1rem; font-weight: 700; color: var(--text-color);">Marcus Chen <span style="font-weight: 400; color: var(--text-light); font-size: 0.85rem; margin-left: 0.5rem;">| CEO, Global Logistics</span></p>
                         </div>
                     </div>
                 </div>
@@ -257,7 +252,7 @@
                 </div>
 
                 <div class="footer-links">
-                    <h4>Platform</h4>
+                    <h4>Quick Links</h4>
                     <ul>
                         <li><a href="index.html">Home 1 (Corporate)</a></li>
                         <li><a href="index-2.html">Home 2 (Adventure)</a></li>

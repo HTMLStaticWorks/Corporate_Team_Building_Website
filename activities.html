@@ -35,12 +35,13 @@
                 <a href="gallery.html">Gallery</a>
                 <a href="about.html">About Us</a>
                 <a href="contact.html">Contact</a>
+                <a href="login.html" class="btn btn-primary mobile-only" style="margin-top: 1rem; width: 100%;">Client Login</a>
             </nav>
             
             <div class="nav-controls">
                 <button id="theme-toggle" aria-label="Toggle Dark Mode"><i class="fa-solid fa-moon"></i></button>
                 <button id="rtl-toggle" aria-label="Toggle RTL"><i class="fa-solid fa-language"></i></button>
-                <a href="login.html" class="btn btn-primary" style="padding: 0.5rem 1.5rem; font-size: 0.875rem;">Client Login</a>
+                <a href="login.html" class="btn btn-primary desktop-only" style="padding: 0.5rem 1.5rem; font-size: 0.875rem;">Client Login</a>
                 <button class="hamburger" aria-label="Toggle navigation"><i class="fa-solid fa-bars"></i></button>
             </div>
         </div>
@@ -59,29 +60,23 @@
     <!-- ======== ACTIVITIES GRID STORE ======== -->
     <section class="section" style="padding-top: 2rem;">
         <div class="container">
-            <!-- Filter Bar Placeholder -->
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 3rem; flex-wrap: wrap; gap: 1rem; padding: 1rem; background: var(--card-bg); border-radius: 8px; box-shadow: var(--shadow-sm);">
-                <div style="display: flex; gap: 1rem;">
+            <!-- Filter Bar -->
+            <div class="filter-bar">
+                <div class="filter-controls">
                     <select class="form-control" style="width: auto;">
                         <option>Difficulty: All</option>
-                        <option>Beginner</option>
-                        <option>Intermediate</option>
-                        <option>Advanced</option>
                     </select>
                     <select class="form-control" style="width: auto;">
                         <option>Objective: All</option>
-                        <option>Leadership</option>
-                        <option>Communication</option>
-                        <option>Trust Building</option>
                     </select>
                 </div>
-                <div style="font-weight: 600; color: var(--text-light);">Showing 6 Experiences</div>
+                <div class="filter-info">Showing 6 Experiences</div>
             </div>
 
             <!-- Grid of all activities -->
-            <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));">
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem;">
                 
-                <div class="activity-card">
+                <div class="activity-card" style="flex: 0 1 350px;">
                     <div class="card-img">
                         <span class="badge">Most Popular</span>
                         <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="River Rafting">
@@ -98,7 +93,7 @@
                     </div>
                 </div>
 
-                <div class="activity-card">
+                <div class="activity-card" style="flex: 0 1 350px;">
                     <div class="card-img">
                         <img src="https://images.unsplash.com/photo-1551698618-1dfe5d97d256?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Mountain Survival Strategy">
                     </div>
@@ -114,7 +109,7 @@
                     </div>
                 </div>
 
-                 <div class="activity-card">
+                <div class="activity-card" style="flex: 0 1 350px;">
                     <div class="card-img">
                         <img src="https://images.unsplash.com/photo-1533692328991-08159ff19fca?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Wilderness Trek">
                     </div>
@@ -130,7 +125,7 @@
                     </div>
                 </div>
 
-                <div class="activity-card">
+                <div class="activity-card" style="flex: 0 1 350px;">
                     <div class="card-img">
                          <span class="badge">High Intensity</span>
                         <img src="https://images.unsplash.com/photo-1522163182402-834f871fd851?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Rock Climbing">
@@ -147,7 +142,7 @@
                     </div>
                 </div>
 
-                 <div class="activity-card">
+                <div class="activity-card" style="flex: 0 1 350px;">
                     <div class="card-img">
                         <img src="https://images.unsplash.com/photo-1517400508447-f8dd518b86db?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="48-Hour Drop">
                     </div>
@@ -163,7 +158,7 @@
                     </div>
                 </div>
 
-                 <div class="activity-card">
+                <div class="activity-card" style="flex: 0 1 350px;">
                     <div class="card-img">
                         <img src="https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Obstacle Course">
                     </div>
@@ -180,7 +175,7 @@
                 </div>
 
                 <!-- NEW ACTIVITY 1 -->
-                <div class="activity-card">
+                <div class="activity-card" style="flex: 0 1 350px;">
                     <div class="card-img">
                         <img src="https://images.unsplash.com/photo-1505235687559-28b5f54645b7?q=80&w=1200&auto=format&fit=crop" alt="Team Sailing">
                     </div>
@@ -197,7 +192,7 @@
                 </div>
 
                 <!-- NEW ACTIVITY 2 -->
-                <div class="activity-card">
+                <div class="activity-card" style="flex: 0 1 350px;">
                     <div class="card-img">
                         <img src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff?q=80&w=1200&auto=format&fit=crop" alt="High Ropes">
                     </div>
@@ -214,7 +209,7 @@
                 </div>
 
                 <!-- NEW ACTIVITY 3 -->
-                <div class="activity-card">
+                <div class="activity-card" style="flex: 0 1 350px;">
                     <div class="card-img">
                         <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=1200&auto=format&fit=crop" alt="Strategy Paintball">
                     </div>
@@ -241,16 +236,16 @@
                 <h2>The ROI of Adventure</h2>
                 <p>Our activities are more than just games—they are designed by corporate psychologists and elite trainers to deliver measurable results.</p>
             </div>
-            <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
-                <div class="feature-card" style="background-image: linear-gradient(rgba(15, 42, 29, 0.8), rgba(15, 42, 29, 0.8)), url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=800&auto=format&fit=crop'); background-size: cover; background-position: center; color: white; border: none; min-height: 350px; display: flex; flex-direction: column; justify-content: center; text-align: center; padding: 3rem 2rem;">
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem;">
+                <div class="feature-card" style="flex: 0 1 350px; background-image: linear-gradient(rgba(15, 42, 29, 0.8), rgba(15, 42, 29, 0.8)), url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=800&auto=format&fit=crop'); background-size: cover; background-position: center; color: white; border: none; min-height: 350px; display: flex; flex-direction: column; justify-content: center; text-align: center; padding: 3rem 2rem;">
                     <h3 style="color: var(--secondary); margin-bottom: 1rem;">Breaking Silos</h3>
                     <p style="color: white; margin-bottom: 0;">Cross-functional activities that force different departments to speak the same 'adventure' language to succeed.</p>
                 </div>
-                <div class="feature-card" style="background-image: linear-gradient(rgba(15, 42, 29, 0.8), rgba(15, 42, 29, 0.8)), url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=800&auto=format&fit=crop'); background-size: cover; background-position: center; color: white; border: none; min-height: 350px; display: flex; flex-direction: column; justify-content: center; text-align: center; padding: 3rem 2rem;">
+                <div class="feature-card" style="flex: 0 1 350px; background-image: linear-gradient(rgba(15, 42, 29, 0.8), rgba(15, 42, 29, 0.8)), url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=800&auto=format&fit=crop'); background-size: cover; background-position: center; color: white; border: none; min-height: 350px; display: flex; flex-direction: column; justify-content: center; text-align: center; padding: 3rem 2rem;">
                     <h3 style="color: var(--secondary); margin-bottom: 1rem;">Mental Agility</h3>
                     <p style="color: white; margin-bottom: 0;">Navigating unknown environments improves rapid decision-making and creative problem-solving under stress.</p>
                 </div>
-                <div class="feature-card" style="background-image: linear-gradient(rgba(15, 42, 29, 0.8), rgba(15, 42, 29, 0.8)), url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=800&auto=format&fit=crop'); background-size: cover; background-position: center; color: white; border: none; min-height: 350px; display: flex; flex-direction: column; justify-content: center; text-align: center; padding: 3rem 2rem;">
+                <div class="feature-card" style="flex: 0 1 350px; background-image: linear-gradient(rgba(15, 42, 29, 0.8), rgba(15, 42, 29, 0.8)), url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=800&auto=format&fit=crop'); background-size: cover; background-position: center; color: white; border: none; min-height: 350px; display: flex; flex-direction: column; justify-content: center; text-align: center; padding: 3rem 2rem;">
                     <h3 style="color: var(--secondary); margin-bottom: 1rem;">Energy Renewal</h3>
                     <p style="color: white; margin-bottom: 0;">Step away from the screen and return to the office with heightened focus and a unified team mission.</p>
                 </div>
@@ -316,7 +311,7 @@
                 </div>
 
                 <div class="footer-links">
-                    <h4>Platform</h4>
+                    <h4>Quick Links</h4>
                     <ul>
                         <li><a href="index.html">Home 1 (Corporate)</a></li>
                         <li><a href="index-2.html">Home 2 (Adventure)</a></li>

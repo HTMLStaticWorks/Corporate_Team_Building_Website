@@ -25,6 +25,19 @@
     padding: 1.5rem 2rem;
     font-size: 1.5rem;
     border-bottom: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sidebar-close {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--text-light);
+    font-size: 1.25rem;
+    cursor: pointer;
+    padding: 0.5rem;
 }
 
 .sidebar-nav {
@@ -81,6 +94,7 @@
     margin-bottom: 2rem;
     padding-bottom: 1rem;
     border-bottom: 1px solid var(--border-color);
+    gap: 1rem;
 }
 
 .dash-user-profile {
@@ -123,9 +137,17 @@
 }
 
 /* Tables */
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin-bottom: 1rem;
+}
+
 .dash-table {
     width: 100%;
     border-collapse: collapse;
+    min-width: 600px; /* Force minimum width for horizontal scroll if too many columns */
 }
 
 .dash-table th, .dash-table td {
@@ -164,19 +186,78 @@
 
 @media(max-width: 991px) {
     .sidebar {
+        width: 260px;
         transform: translateX(-100%);
     }
+    
     .sidebar.active {
         transform: translateX(0);
+        box-shadow: var(--shadow-lg);
     }
+    
+    .sidebar-close {
+        display: block;
+    }
+
     .dashboard-main {
         margin-left: 0;
         max-width: 100vw;
         padding: 1.5rem;
     }
+    
     .sidebar-toggle {
         display: block;
     }
+
+    .dash-card-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .dash-card-header > div {
+        width: 100%;
+        display: flex;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 576px) {
+    .dash-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+    }
+
+    .dash-header > div:last-child {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .sidebar {
+        width: 85%;
+        max-width: 300px;
+    }
+}
+
+/* Sidebar Backdrop */
+.sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 90;
+    opacity: 0;
+    visibility: hidden;
+    transition: all var(--transition-normal);
+}
+
+.sidebar-overlay.active {
+    opacity: 1;
+    visibility: visible;
 }
 
 /* Dark mode specific for dashboard */

@@ -35,12 +35,13 @@
                 <a href="gallery.html">Gallery</a>
                 <a href="about.html">About Us</a>
                 <a href="contact.html">Contact</a>
+                <a href="login.html" class="btn btn-primary mobile-only" style="margin-top: 1rem; width: 100%;">Client Login</a>
             </nav>
             
             <div class="nav-controls">
                 <button id="theme-toggle" aria-label="Toggle Dark Mode"><i class="fa-solid fa-moon"></i></button>
                 <button id="rtl-toggle" aria-label="Toggle RTL"><i class="fa-solid fa-language"></i></button>
-                <a href="login.html" class="btn btn-primary" style="padding: 0.5rem 1.5rem; font-size: 0.875rem;">Client Login</a>
+                <a href="login.html" class="btn btn-primary desktop-only" style="padding: 0.5rem 1.5rem; font-size: 0.875rem;">Client Login</a>
                 <button class="hamburger" aria-label="Toggle navigation"><i class="fa-solid fa-bars"></i></button>
             </div>
         </div>
@@ -122,27 +123,21 @@
             </div>
 
             <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem;">
-                <div style="flex: 0 1 450px; background: var(--card-bg); padding: 2.5rem; border-radius: 8px; box-shadow: var(--shadow-sm); position: relative;">
+                <div style="flex: 0 1 450px; background: var(--card-bg); padding: 2.5rem; border-radius: 8px; box-shadow: var(--shadow-sm); position: relative; display: flex; flex-direction: column;">
                     <i class="fa-solid fa-quote-left" style="position: absolute; top: 1.5rem; right: 2rem; font-size: 3rem; color: rgba(201, 164, 76, 0.2);"></i>
                     <p style="font-size: 1.125rem; font-style: italic; margin-bottom: 2rem; color: var(--text-color); position: relative; z-index: 1;">"The digital dashboard alone saved our HR team 15 hours of organizing waivers and groups. The actual river rafting event completely transformed our sales team's dynamic."</p>
-                    <div style="display: flex; align-items: center; gap: 1rem;">
-                        <img src="https://ui-avatars.com/api/?name=Sarah+Jenkins&background=0F2A1D&color=F5F2E8" alt="Sarah J" style="width: 50px; height: 50px; border-radius: 50%;">
-                        <div>
-                            <h4 style="margin: 0; font-size: 1rem;">Sarah Jenkins</h4>
-                            <p style="margin: 0; font-size: 0.85rem; color: var(--text-light);">VP of HR, TechFlow Inc.</p>
-                        </div>
+                    <div style="display: flex; align-items: center; justify-content: center; gap: 1rem; margin-top: auto;">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=200&auto=format&fit=crop" alt="Sarah Jenkins" style="width: 55px; height: 55px; border-radius: 50%; object-fit: cover; border: 2px solid var(--secondary); flex-shrink: 0;">
+                        <p style="margin: 0; font-size: 1rem; font-weight: 700; color: var(--text-color); line-height: 1.2;">Sarah Jenkins <span style="font-weight: 400; color: var(--text-light); font-size: 0.85rem; margin-left: 0.5rem;">| VP of HR, TechFlow Inc.</span></p>
                     </div>
                 </div>
 
-                <div style="flex: 0 1 450px; background: var(--card-bg); padding: 2.5rem; border-radius: 8px; box-shadow: var(--shadow-sm); position: relative;">
+                <div style="flex: 0 1 450px; background: var(--card-bg); padding: 2.5rem; border-radius: 8px; box-shadow: var(--shadow-sm); position: relative; display: flex; flex-direction: column;">
                     <i class="fa-solid fa-quote-left" style="position: absolute; top: 1.5rem; right: 2rem; font-size: 3rem; color: rgba(201, 164, 76, 0.2);"></i>
                     <p style="font-size: 1.125rem; font-style: italic; margin-bottom: 2rem; color: var(--text-color); position: relative; z-index: 1;">"Safety was our board's biggest concern. Elevate handled everything with such professionalism that we barely had to lift a finger. Absolute luxury experience."</p>
-                    <div style="display: flex; align-items: center; gap: 1rem;">
-                        <img src="https://ui-avatars.com/api/?name=Marcus+Torres&background=0F2A1D&color=F5F2E8" alt="Marcus T" style="width: 50px; height: 50px; border-radius: 50%;">
-                        <div>
-                            <h4 style="margin: 0; font-size: 1rem;">Marcus Torres</h4>
-                            <p style="margin: 0; font-size: 0.85rem; color: var(--text-light);">CEO, Apex Financial</p>
-                        </div>
+                    <div style="display: flex; align-items: center; justify-content: center; gap: 1rem; margin-top: auto;">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop" alt="Marcus Torres" style="width: 55px; height: 55px; border-radius: 50%; object-fit: cover; border: 2px solid var(--secondary); flex-shrink: 0;">
+                        <p style="margin: 0; font-size: 1rem; font-weight: 700; color: var(--text-color); line-height: 1.2;">Marcus Torres <span style="font-weight: 400; color: var(--text-light); font-size: 0.85rem; margin-left: 0.5rem;">| CEO, Apex Financial</span></p>
                     </div>
                 </div>
             </div>
@@ -166,7 +161,7 @@
                 </div>
 
                 <div class="footer-links">
-                    <h4>Platform</h4>
+                    <h4>Quick Links</h4>
                     <ul>
                         <li><a href="index.html">Home 1 (Corporate)</a></li>
                         <li><a href="index-2.html">Home 2 (Adventure)</a></li>

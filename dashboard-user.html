@@ -22,6 +22,7 @@
         <aside class="sidebar" id="sidebar">
             <div class="sidebar-brand">
                 <a href="index.html" class="nav-brand"><i class="fa-solid fa-mountain" style="color: var(--secondary); margin-right: 0.5rem;"></i>Elevate</a>
+                <button class="sidebar-close" aria-label="Close sidebar"><i class="fa-solid fa-xmark"></i></button>
             </div>
             
             <nav class="sidebar-nav">
@@ -107,30 +108,32 @@
                     <div class="dash-card-header">
                         <h3>Action Required</h3>
                     </div>
-                    <table class="dash-table">
-                        <thead>
-                            <tr>
-                                <th>Participant</th>
-                                <th>Email</th>
-                                <th>Status</th>
-                                <th>Action</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>John Doe</td>
-                                <td>john@acmecorp.com</td>
-                                <td><span class="status-badge status-action">Waiver Missing</span></td>
-                                <td><a href="#" style="color: var(--primary); font-weight: 500;">Resend Invite</a></td>
-                            </tr>
-                            <tr>
-                                <td>Sarah Jenkins</td>
-                                <td>sarah@acmecorp.com</td>
-                                <td><span class="status-badge status-action">Waiver Missing</span></td>
-                                <td><a href="#" style="color: var(--primary); font-weight: 500;">Resend Invite</a></td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <div class="table-responsive">
+                        <table class="dash-table">
+                            <thead>
+                                <tr>
+                                    <th>Participant</th>
+                                    <th>Email</th>
+                                    <th>Status</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>John Doe</td>
+                                    <td>john@acmecorp.com</td>
+                                    <td><span class="status-badge status-action">Waiver Missing</span></td>
+                                    <td><a href="#" style="color: var(--primary); font-weight: 500;">Resend Invite</a></td>
+                                </tr>
+                                <tr>
+                                    <td>Sarah Jenkins</td>
+                                    <td>sarah@acmecorp.com</td>
+                                    <td><span class="status-badge status-action">Waiver Missing</span></td>
+                                    <td><a href="#" style="color: var(--primary); font-weight: 500;">Resend Invite</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
 
@@ -141,30 +144,32 @@
                         <h3>Team Roster</h3>
                         <button class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.875rem;"><i class="fa-solid fa-plus" style="margin-right: 0.5rem;"></i> Add Participant</button>
                     </div>
-                    <table class="dash-table">
-                        <thead>
-                            <tr>
-                                <th>Name</th>
-                                <th>Email</th>
-                                <th>Role</th>
-                                <th>Status</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Marcus Torres</td>
-                                <td>marcus@acmecorp.com</td>
-                                <td>Sales Lead</td>
-                                <td><span class="status-badge status-valid">Attending</span></td>
-                            </tr>
-                            <tr>
-                                <td>John Doe</td>
-                                <td>john@acmecorp.com</td>
-                                <td>Analyst</td>
-                                <td><span class="status-badge status-pending">Pending Invite</span></td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <div class="table-responsive">
+                        <table class="dash-table">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Role</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Marcus Torres</td>
+                                    <td>marcus@acmecorp.com</td>
+                                    <td>Sales Lead</td>
+                                    <td><span class="status-badge status-valid">Attending</span></td>
+                                </tr>
+                                <tr>
+                                    <td>John Doe</td>
+                                    <td>john@acmecorp.com</td>
+                                    <td>Analyst</td>
+                                    <td><span class="status-badge status-pending">Pending Invite</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
 
@@ -196,30 +201,32 @@
                             <h3>Document Storage</h3>
                             <button class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.875rem;"><i class="fa-solid fa-download" style="margin-right: 0.5rem;"></i> Download All PDF</button>
                         </div>
-                        <table class="dash-table">
-                            <thead>
-                                <tr>
-                                    <th>Document</th>
-                                    <th>Signed By</th>
-                                    <th>Date</th>
-                                    <th>Action</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><i class="fa-solid fa-file-pdf" style="color: #d32f2f; margin-right: 0.5rem;"></i> General_Liability.pdf</td>
-                                    <td>Marcus Torres</td>
-                                    <td>Oct 1, 2026</td>
-                                    <td><a href="#" style="color: var(--primary);">View</a></td>
-                                </tr>
-                                <tr>
-                                    <td><i class="fa-solid fa-file-pdf" style="color: #d32f2f; margin-right: 0.5rem;"></i> General_Liability.pdf</td>
-                                    <td>Emily Chen</td>
-                                    <td>Oct 2, 2026</td>
-                                    <td><a href="#" style="color: var(--primary);">View</a></td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <div class="table-responsive">
+                            <table class="dash-table">
+                                <thead>
+                                    <tr>
+                                        <th>Document</th>
+                                        <th>Signed By</th>
+                                        <th>Date</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><i class="fa-solid fa-file-pdf" style="color: #d32f2f; margin-right: 0.5rem;"></i> General_Liability.pdf</td>
+                                        <td>Marcus Torres</td>
+                                        <td>Oct 1, 2026</td>
+                                        <td><a href="#" style="color: var(--primary);">View</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><i class="fa-solid fa-file-pdf" style="color: #d32f2f; margin-right: 0.5rem;"></i> General_Liability.pdf</td>
+                                        <td>Emily Chen</td>
+                                        <td>Oct 2, 2026</td>
+                                        <td><a href="#" style="color: var(--primary);">View</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -34,12 +34,13 @@
                 <a href="gallery.html">Gallery</a>
                 <a href="about.html" style="color: var(--primary)">About Us</a>
                 <a href="contact.html">Contact</a>
+                <a href="login.html" class="btn btn-primary mobile-only" style="margin-top: 1rem; width: 100%;">Client Login</a>
             </nav>
             
             <div class="nav-controls">
                 <button id="theme-toggle" aria-label="Toggle Dark Mode"><i class="fa-solid fa-moon"></i></button>
                 <button id="rtl-toggle" aria-label="Toggle RTL"><i class="fa-solid fa-language"></i></button>
-                <a href="login.html" class="btn btn-primary" style="padding: 0.5rem 1.5rem; font-size: 0.875rem;">Client Login</a>
+                <a href="login.html" class="btn btn-primary desktop-only" style="padding: 0.5rem 1.5rem; font-size: 0.875rem;">Client Login</a>
                 <button class="hamburger" aria-label="Toggle navigation"><i class="fa-solid fa-bars"></i></button>
             </div>
         </div>
@@ -58,8 +59,8 @@
     <!-- ======== ABOUT CONTENT ======== -->
     <section class="section">
         <div class="container">
-            <div class="grid" style="grid-template-columns: 1fr 1fr; align-items: center; gap: 5rem;">
-                <div>
+            <div class="responsive-about-grid">
+                <div class="grid-text-container">
                     <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem;">Corporate Background. <br><span style="color: var(--secondary); font-style: italic;">Wilderness Expertise.</span></h2>
                     <p style="font-size: 1.125rem; color: var(--text-light); margin-bottom: 1.5rem;">Elevate was founded on a simple premise: the boardroom is the worst place to teach teamwork. Real bonds are forged under pressure, outside comfort zones, in environments that require absolute trust.</p>
                     <p style="font-size: 1.125rem; color: var(--text-light); margin-bottom: 2rem;">Our founders spent 15 years as Fortune 500 executives before trading their suits for climbing gear. We understand business metrics, ROI, and HR liability. We also understand exactly how to build a high-performing team.</p>
@@ -70,7 +71,7 @@
                         <li><i class="fa-solid fa-check" style="color: var(--secondary); margin-right: 0.5rem;"></i> 200% Year-over-year safety record retention</li>
                     </ul>
                 </div>
-                <div style="display: flex; justify-content: center; align-items: center;">
+                <div class="grid-img-container" style="display: flex; justify-content: center; align-items: center;">
                     <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Founders" style="border-radius: 12px; box-shadow: var(--shadow-lg); width: 100%; height: 500px; object-fit: cover;">
                 </div>
             </div>
@@ -192,11 +193,11 @@
     <!-- ======== GLOBAL REACH ======== -->
     <section class="section">
         <div class="container">
-            <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
-                <div>
+            <div class="responsive-about-grid" style="gap: 4rem;">
+                <div class="grid-text-container">
                     <h2 style="margin-bottom: 1.5rem;">Global Perspective. <br><span style="color: var(--secondary); font-style: italic;">Local Expertise.</span></h2>
                     <p style="color: var(--text-light); font-size: 1.125rem; margin-bottom: 2rem;">While our headquarters are in Denver, our reach spans six continents. We maintain elite instructor hubs in the Alps, the Andes, and the Pacific Rim, allowing us to deploy world-class team building anywhere your business operates.</p>
-                    <div style="display: flex; flex-wrap: wrap; gap: 2rem;">
+                    <div class="stats-flex" style="display: flex; flex-wrap: wrap; gap: 2rem;">
                         <div style="text-align: center;">
                             <h3 style="color: var(--primary); margin-bottom: 0.25rem;">12</h3>
                             <p style="font-size: 0.75rem; text-transform: uppercase; font-weight: 600; letter-spacing: 1px;">Base Camps</p>
@@ -211,9 +212,9 @@
                         </div>
                     </div>
                 </div>
-                <div>
+                <div class="grid-img-container">
                     <!-- Reusing a luxury image -->
-                    <img src="https://images.unsplash.com/photo-1544216717-3bbf52512659?q=80&w=1200&auto=format&fit=crop" alt="Global Operations" style="border-radius: 12px; box-shadow: var(--shadow-lg);">
+                    <img src="https://images.unsplash.com/photo-1544216717-3bbf52512659?q=80&w=1200&auto=format&fit=crop" alt="Global Operations" style="border-radius: 12px; box-shadow: var(--shadow-lg); width: 100%; height: auto;">
                 </div>
             </div>
         </div>
@@ -248,7 +249,7 @@
                 </div>
 
                 <div class="footer-links">
-                    <h4>Platform</h4>
+                    <h4>Quick Links</h4>
                     <ul>
                         <li><a href="index.html">Home 1 (Corporate)</a></li>
                         <li><a href="index-2.html">Home 2 (Adventure)</a></li>

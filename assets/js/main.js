@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     dropdownToggles.forEach(toggle => {
         toggle.addEventListener('click', (e) => {
             // Only toggle on mobile screens
-            if (window.innerWidth <= 991) {
+            if (window.innerWidth <= 1200) {
                 e.preventDefault();
                 const parent = toggle.parentElement;
                 parent.classList.toggle('active');
@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // ---- Dark Mode Toggle ----
-    const themeToggleBtn = document.getElementById('themeToggle');
+    const themeToggleBtn = document.getElementById('theme-toggle');
     
     // Check local storage for theme preference
     const currentTheme = localStorage.getItem('theme');
@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ---- RTL Toggle ----
-    const rtlToggleBtn = document.getElementById('rtlToggle');
+    const rtlToggleBtn = document.getElementById('rtl-toggle');
     
     // Check local storage for direction preference
     const currentDir = localStorage.getItem('dir');

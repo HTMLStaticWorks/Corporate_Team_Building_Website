@@ -5,15 +5,32 @@ document.addEventListener('DOMContentLoaded', () => {
     const sidebarToggle = document.getElementById('sidebarToggle');
 
     if (sidebarToggle && sidebar) {
-        sidebarToggle.addEventListener('click', () => {
+        // Create backdrop element
+        const backdrop = document.createElement('div');
+        backdrop.className = 'sidebar-overlay';
+        document.body.appendChild(backdrop);
+
+        const toggleSidebar = () => {
             sidebar.classList.toggle('active');
-        });
+            backdrop.classList.toggle('active');
+        };
+
+        sidebarToggle.addEventListener('click', toggleSidebar);
+
+        // Sidebar close button
+        const closeBtn = sidebar.querySelector('.sidebar-close');
+        if (closeBtn) {
+            closeBtn.addEventListener('click', toggleSidebar);
+        }
+
+        // Close on backdrop click
+        backdrop.addEventListener('click', toggleSidebar);
 
         // Close sidebar on click outside in mobile
         document.addEventListener('click', (e) => {
             if (window.innerWidth <= 991) {
                 if (!sidebar.contains(e.target) && !sidebarToggle.contains(e.target) && sidebar.classList.contains('active')) {
-                    sidebar.classList.remove('active');
+                    toggleSidebar();
                 }
             }
         });

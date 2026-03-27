@@ -22,6 +22,7 @@
         <aside class="sidebar" id="sidebar">
             <div class="sidebar-brand">
                 <a href="index.html" class="nav-brand"><i class="fa-solid fa-mountain" style="color: var(--secondary); margin-right: 0.5rem;"></i>Elevate <span style="font-size: 0.85rem; font-family: var(--font-body); font-weight: 500; color: #d32f2f;">ADMIN</span></a>
+                <button class="sidebar-close" aria-label="Close sidebar"><i class="fa-solid fa-xmark"></i></button>
             </div>
             
             <nav class="sidebar-nav">
@@ -85,49 +86,51 @@
                 <div class="dash-card">
                     <div class="dash-card-header">
                         <h3>Upcoming Events Schedule</h3>
-                        <div style="display: flex; gap: 0.5rem;">
+                        <div>
                             <button class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.875rem;">Filter by Date</button>
                             <button class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.875rem;">+ Manual Override Book</button>
                         </div>
                     </div>
-                    <table class="dash-table">
-                        <thead>
-                            <tr>
-                                <th>Client</th>
-                                <th>Activity Type</th>
-                                <th>Date</th>
-                                <th>Pax</th>
-                                <th>Waiver Status</th>
-                                <th>Action</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><strong style="color: var(--primary)">Acme Corp</strong></td>
-                                <td>River Rapids Challenge</td>
-                                <td>Oct 15, 2026</td>
-                                <td>24</td>
-                                <td><span class="status-badge status-pending">75% Signed</span></td>
-                                <td><a href="#" style="color: var(--primary); font-weight: 500;">Manage</a></td>
-                            </tr>
-                            <tr>
-                                <td><strong style="color: var(--primary)">TechFlow Inc</strong></td>
-                                <td>Mountain Survival</td>
-                                <td>Oct 18, 2026</td>
-                                <td>15</td>
-                                <td><span class="status-badge status-valid">100% Cleared</span></td>
-                                <td><a href="#" style="color: var(--primary); font-weight: 500;">Manage</a></td>
-                            </tr>
-                            <tr>
-                                <td><strong style="color: var(--primary)">Apex Financial</strong></td>
-                                <td>Executive Retreat Custom</td>
-                                <td>Nov 02, 2026</td>
-                                <td>8</td>
-                                <td><span class="status-badge status-action">0% Signed</span></td>
-                                <td><a href="#" style="color: var(--primary); font-weight: 500;">Manage</a></td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <div class="table-responsive">
+                        <table class="dash-table">
+                            <thead>
+                                <tr>
+                                    <th>Client</th>
+                                    <th>Activity Type</th>
+                                    <th>Date</th>
+                                    <th>Pax</th>
+                                    <th>Waiver Status</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong style="color: var(--primary)">Acme Corp</strong></td>
+                                    <td>River Rapids Challenge</td>
+                                    <td>Oct 15, 2026</td>
+                                    <td>24</td>
+                                    <td><span class="status-badge status-pending">75% Signed</span></td>
+                                    <td><a href="#" style="color: var(--primary); font-weight: 500;">Manage</a></td>
+                                </tr>
+                                <tr>
+                                    <td><strong style="color: var(--primary)">TechFlow Inc</strong></td>
+                                    <td>Mountain Survival</td>
+                                    <td>Oct 18, 2026</td>
+                                    <td>15</td>
+                                    <td><span class="status-badge status-valid">100% Cleared</span></td>
+                                    <td><a href="#" style="color: var(--primary); font-weight: 500;">Manage</a></td>
+                                </tr>
+                                <tr>
+                                    <td><strong style="color: var(--primary)">Apex Financial</strong></td>
+                                    <td>Executive Retreat Custom</td>
+                                    <td>Nov 02, 2026</td>
+                                    <td>8</td>
+                                    <td><span class="status-badge status-action">0% Signed</span></td>
+                                    <td><a href="#" style="color: var(--primary); font-weight: 500;">Manage</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
 
@@ -157,22 +160,24 @@
 
                     <div class="dash-card">
                         <h3 style="margin-bottom: 1.5rem;">Recent Dispatches</h3>
-                        <table class="dash-table">
-                            <thead>
-                                <tr>
-                                    <th>Event</th>
-                                    <th>Files Processed</th>
-                                    <th>Status</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Stark Industries - Rock Climbing</td>
-                                    <td>142 Photos, 4 Videos</td>
-                                    <td><span class="status-badge status-valid">Delivered to Client Dashboard</span></td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <div class="table-responsive">
+                            <table class="dash-table">
+                                <thead>
+                                    <tr>
+                                        <th>Event</th>
+                                        <th>Files Processed</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Stark Industries - Rock Climbing</td>
+                                        <td>142 Photos, 4 Videos</td>
+                                        <td><span class="status-badge status-valid">Delivered to Client Dashboard</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
 
                 </div>
