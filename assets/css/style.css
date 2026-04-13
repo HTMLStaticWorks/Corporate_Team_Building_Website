@@ -1,24 +1,24 @@
 /* 
    Global Variables & CSS Reset
-   Primary: Dark Forest Green (#0F2A1D)
-   Secondary: Rich Gold (#C9A44C)
-   Accent: Cream White (#F5F2E8)
+   Primary: Corporate Slate (#0F172A)
+   Secondary: Energetic Orange (#F97316)
+   Accent: White (#FFFFFF)
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@600;700;800&display=swap');
 
 :root {
-    --primary: #0F2A1D; /* Dark Forest Green */
-    --secondary: #C9A44C; /* Rich Gold */
-    --accent: #F5F2E8; /* Cream White */
+    --primary: #1E293B; /* Corporate Slate */
+    --secondary: #F97316; /* Energetic Orange */
+    --accent: #FFFFFF; /* Pure White */
     
-    --bg-color: #F5F2E8;
-    --text-color: #1A1A1A;
-    --text-light: #555555;
-    --border-color: #E2DFD5;
+    --bg-color: #F8FAFC;
+    --text-color: #334155;
+    --text-light: #64748B;
+    --border-color: #E2E8F0;
     --card-bg: #FFFFFF;
     
-    --font-heading: 'Playfair Display', serif;
+    --font-heading: 'Montserrat', sans-serif;
     --font-body: 'Inter', sans-serif;
     
     --transition-fast: 0.2s ease;
@@ -131,17 +131,17 @@ button, input, textarea, select {
 
 .btn-primary:hover {
     background-color: var(--secondary);
-    color: var(--primary);
+    color: white !important;
 }
 
 .btn-secondary {
     background-color: var(--secondary);
-    color: var(--primary);
+    color: white;
 }
 
 .btn-secondary:hover {
     background-color: var(--primary);
-    color: var(--accent);
+    color: white !important;
 }
 
 .btn-outline {
@@ -152,7 +152,7 @@ button, input, textarea, select {
 
 .btn-outline:hover {
     background-color: var(--primary);
-    color: var(--accent);
+    color: var(--accent) !important;
 }
 
 /* Utility Classes */
@@ -303,12 +303,28 @@ button, input, textarea, select {
     gap: 1rem;
 }
 
-.nav-controls button {
+.nav-controls button,
+#theme-toggle,
+#rtl-toggle {
     background: none;
     border: none;
     cursor: pointer;
     font-size: 1.25rem;
     color: var(--primary);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--transition-fast);
+    border-radius: 50%;
+}
+
+.nav-controls button:hover,
+#theme-toggle:hover,
+#rtl-toggle:hover {
+    background-color: rgba(249, 115, 22, 0.1);
+    color: var(--secondary) !important;
 }
 
 .hamburger {
@@ -468,7 +484,7 @@ button, input, textarea, select {
 }
 
 .bg-light {
-    background-color: rgba(201, 164, 76, 0.05); /* very light gold tint */
+    background-color: #F1F5F9; /* Very extremely light slate */
 }
 
 .section-header {
@@ -603,13 +619,13 @@ button, input, textarea, select {
     left: -10%;
     width: 40%;
     height: 200%;
-    background: var(--secondary);
+    background: var(--accent);
     opacity: 0.05;
     transform: rotate(15deg);
 }
 
 .cta-section h2 {
-    color: var(--secondary);
+    color: var(--accent);
     margin-bottom: 1rem;
 }
 
@@ -622,9 +638,10 @@ button, input, textarea, select {
 
 /* Footer Section */
 .footer {
-    background-color: var(--primary);
+    background-color: #020617; /* Darker than primary slate for contrast */
     color: var(--accent);
     padding: 4rem 0 0 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .footer-grid {
@@ -635,7 +652,7 @@ button, input, textarea, select {
 }
 
 .footer h4 {
-    color: var(--accent);
+    color: var(--secondary);
     margin-bottom: 1.5rem;
     font-size: 1.125rem;
 }
@@ -972,16 +989,20 @@ button, input, textarea, select {
 .process-step {
     flex: 0 1 280px;
     position: relative;
-    padding: 3rem 2rem 2rem;
+    padding: 4.5rem 2rem 3rem;
     background: var(--card-bg);
     border-radius: 12px;
     border: 1px solid var(--border-color);
     text-align: center;
-    transition: transform var(--transition-normal);
+    transition: all var(--transition-normal);
+    color: white;
+    background-size: cover;
+    background-position: center;
 }
 
 .process-step:hover {
-    transform: translateY(-5px);
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
 }
 
 .process-step::before {
@@ -1002,11 +1023,22 @@ button, input, textarea, select {
     font-weight: 700;
     font-family: var(--font-heading);
     box-shadow: var(--shadow-sm);
+    z-index: 3; /* Always on top of everything */
 }
 
 .process-step h4 {
     margin-bottom: 0.75rem;
-    color: var(--primary);
+    color: white;
+    position: relative;
+    z-index: 2;
+    font-size: 1.25rem;
+}
+
+.process-step p {
+    color: rgba(255, 255, 255, 0.9);
+    position: relative;
+    z-index: 2;
+    line-height: 1.6;
 }
 
 /* Testimonials */
